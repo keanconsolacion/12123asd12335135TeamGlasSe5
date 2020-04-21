@@ -25,10 +25,11 @@ font-family: 'PT Sans', sans-serif;
   width: 500px;
   height: 500px;
   position: absolute;
-  left: 50%;
-  margin-top: -20px;
-  margin-left: -50px;
-  transform: translate(-40%, 50%);
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
 }
 
@@ -51,10 +52,11 @@ font-family: 'PT Sans', sans-serif;
   width: 500px;
   height: 900px;
   position: absolute;
-  left: 50%;
-  margin-left: -50px;
-  margin-top: -50px;
-  transform: translate(-40%, 10%);
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .register_header{
   font-size: 22px;
@@ -66,4 +68,77 @@ font-family: 'PT Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
+}
+
+.code-border{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:700;
+  color: white;
+  background-color: black;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: black;
+  width: 500px;
+  height:680px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.btn-edit{
+  width: 90px;
+}
+
+.form-code{
+  margin-top: 10px;
+  margin-left: 240px;
+}
+
+.header-code{
+  font-family: 'Roboto', sans-serif;
+  font-style: bold;
+  font-weight:700;
+  margin-top: -20px;
+
+}
+.inside-div{
+  margin-bottom: -25px;
+}
+
+.inside-border{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:700;
+  color: black;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: transparent;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.info-note{
+  margin-bottom: -30px;
+}
+#code{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:900;
+  font-size: 70px;
+}
+
+.info{
+  margin-top: -30px;
+  color: white;
+}
+
+#confirm{
+  width: 100px;
 }
