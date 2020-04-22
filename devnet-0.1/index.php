@@ -4,7 +4,7 @@
    include_once 'connection.php';
 
 
-      echo "$generatekey";
+      //echo "$generatekey";
       // login Function
       if(isset($_POST['submit'])){
         // header("Location:welcome.php");
@@ -32,12 +32,6 @@
           }
 
       }
-
-
-
-
-
-
 
  ?>
 
@@ -78,7 +72,7 @@
           <form class="loginform" action="" method="post">
 
               <div class="DevNet-Header">
-                  <p class="text-center login_header">.devnet <?php echo "$generatekey"; ?></p>
+                  <p class="text-center login_header">.devnet <?php //echo "$generatekey"; ?></p>
               </div>
             <div class="container mt-4">
                 <div class="row">

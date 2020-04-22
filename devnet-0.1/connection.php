@@ -16,13 +16,13 @@
 
 */
 $server = "localhost";
-$dbuser = "gtech.dp";
-$dbpass = "dp";
+$dbuser = "root";
+$dbpass = "";
 
   //$dbname, is the name of the database being used, since in the office hosted servers I cannot change
   //my db name since it is already set for me, you can create your own database and change the settings here
   //to match your database.
-$dbname = "paulodb";
+$dbname = "otso";
 
 
   //these variable will be used as an import in other php files when connecting to the database.
