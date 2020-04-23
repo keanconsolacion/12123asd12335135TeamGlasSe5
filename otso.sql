@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2020 at 10:14 AM
+-- Generation Time: Apr 23, 2020 at 04:32 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -40,13 +40,6 @@ CREATE TABLE `guest_register` (
   `guestcode` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `guest_register`
---
-
-INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`, `idgiven`, `contactnum`, `guestcode`) VALUES
-('Tim', 'Berners', 'Lee', 'TimBerners@yopmail.com', '9111-09-09', 'School Tour', 'School ID', '1231231', '3M2X86');
-
 -- --------------------------------------------------------
 
 --
@@ -57,6 +50,18 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_token`
+--
+
+CREATE TABLE `user_token` (
+  `id` int(30) NOT NULL,
+  `username` varchar(80) NOT NULL,
+  `token` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -76,6 +81,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_token`
+--
+ALTER TABLE `user_token`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -84,6 +95,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user_token`
+--
+ALTER TABLE `user_token`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
