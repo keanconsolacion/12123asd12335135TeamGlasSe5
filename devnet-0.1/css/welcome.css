@@ -1,0 +1,27 @@
+body{
+    background-color: #174886;
+    color: white;
+}
+
+.main-div{
+  text-align: center;
+  border: solid 1px;
+  border-color: silver;
+  border-radius: 30px;
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+.display-card{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin:auto;
+}

@@ -1,14 +1,15 @@
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
 
 
 input {
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: #174886;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
 /* PT sans
 font-family: 'PT Sans', sans-serif;
  */
