@@ -3,7 +3,7 @@
 include_once 'connection.php';
 include_once 'gencode.php';
 // registration variables, with mysqli to prevent SQL Attack
-  
+
       $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
       $middlename = mysqli_real_escape_string($conn,$_POST['middlename']);
       $lastname = mysqli_real_escape_string($conn,$_POST['lastname']);
@@ -14,6 +14,7 @@ include_once 'gencode.php';
       $purpose = mysqli_real_escape_string($conn,$_POST['purpose']);
       $idgiven = mysqli_real_escape_string($conn,$_POST['idgiven']);
       $contactnum = mysqli_real_escape_string($conn,$_POST['contactnum']);
+      $generatekey = guest_keygen(6,2);
 
 
 

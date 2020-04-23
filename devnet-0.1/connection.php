@@ -1,5 +1,7 @@
 <?php
 
+
+session_start();
 //prepared statement variables
 //change these settings to match with your database.
 /*since ginagamit ko is hosted phpmyadmin sa office, I have a current account for the db
@@ -16,13 +18,13 @@
 
 */
 $server = "localhost";
-$dbuser = "root";
-$dbpass = "";
+$dbuser = "gtech.dp";
+$dbpass = "dp";
 
   //$dbname, is the name of the database being used, since in the office hosted servers I cannot change
   //my db name since it is already set for me, you can create your own database and change the settings here
   //to match your database.
-$dbname = "otso";
+$dbname = "paulodb";
 
 
   //these variable will be used as an import in other php files when connecting to the database.
@@ -32,5 +34,8 @@ $dbname = "otso";
 
 $conn = mysqli_connect($server, $dbuser, $dbpass, $dbname);
 
-
+//if connection fails disconnect
+if (!$conn) {
+ die("Connection failed: " . mysqli_connect_error());
+}
  ?>
