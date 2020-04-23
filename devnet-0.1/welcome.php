@@ -1,3 +1,22 @@
+<?php
+
+include 'connection.php';
+include 'authenticate_token.php';  // Check user token
+
+// Check user login or not
+if(!isset($_SESSION['username'])){
+  echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
+  header('Location: index.php');
+}
+
+// logout
+if(isset($_POST['logout'])){
+ session_destroy();
+ header('Location: index.php');
+}
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -17,7 +36,10 @@
 
 <div class="text-center mt-5">
   <h1>welcome.php inprogress</h1>
-
+  <h2><?php echo "debug: tokenID - ".$_SESSION['token'] ?></h2>
+  <form method='post' action="">
+     <input type="submit" value="Logout" name="logout">
+    </form>
 </div>
 
 
