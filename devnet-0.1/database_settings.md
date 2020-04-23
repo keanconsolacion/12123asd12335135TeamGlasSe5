@@ -21,3 +21,11 @@
     idgiven varchar(20)
     contactnum varchar(11)
     guestcode varchar(6)
+
+
+@table
+  user_token
+
+  id int(30) Primary Key Auto Increment
+  username varchar(80)
+  token varchar(80)

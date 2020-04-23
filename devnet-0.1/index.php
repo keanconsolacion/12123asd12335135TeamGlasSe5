@@ -42,7 +42,7 @@
 
                 $token = $_SESSION['token'];
 
-                $sql = "SELECT count(*) AS allcount FROM user_token";
+                $sql = "SELECT count(*) AS allcount WHERE username='$username' FROM user_token";
                 $result_token = mysqli_query($conn,$sql);
                 $row_token = mysqli_fetch_assoc($result_token);
                 if($row_token['allcount'] > 0){
