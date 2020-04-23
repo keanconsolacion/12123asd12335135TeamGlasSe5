@@ -11,9 +11,10 @@ if (isset($_SESSION['username'])) {
    $token = $row['token'];
 
    if($_SESSION['token'] != $token){
-    echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
+    echo "<script type='text/javascript'>alert('Error Token');</script>";
     session_destroy();
-    header('Location: index.php');
+    echo "session token ".$_SESSION['token'];
+    echo "db token".$token;
    }
   }
 }
