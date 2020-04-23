@@ -1,6 +1,6 @@
 <?php
 
-include 'connection.php';
+//include 'connection.php';
 include 'authenticate_token.php';  // Check user token
 
 // Check user login or not
@@ -33,16 +33,20 @@ include 'authenticate_token.php';  // Check user token
   </head>
   <body>
 
+    <nav class="navbar navbar-dark bg-dark">
+      <h3><b>iHub</b></h3>
+    </nav>
+
     <div class="main-div" style="background-color: #5a5a5a; display: inline-block">
       <h1></h1>
       <!--<h2><?php// echo @"debug: tokenID - ".$_SESSION['token'] ?></h2>-->
 
       <div class="display-card float-left" style="margin-top: 20%; margin-left: 10%">
-          <h2><b>What would you like to do?</b></h2>
+          <h3><b>What would you like <br>to do?</b></h3>
       </div>
 
       <div class="display-card float right" style="margin-top: 17.5%; margin-bottom: 15%">
-          <a href="#" class="btn btn-secondary" style="width: 250px; height: 50px; text-align:center;">Visit School</a><br><br>
+          <a href="gamechangerVisitSchoolRegister.php" class="btn btn-secondary" style="width: 250px; height: 50px; text-align:center;">Visit School</a><br><br>
           <a href="#" class="btn btn-secondary" style="width: 250px; height: 50px; text-align:center;">Events</a>
           <br><br><br><br>
 
