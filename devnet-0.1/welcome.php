@@ -34,10 +34,10 @@ include 'authenticate_token.php';  // Check user token
   <body>
 
     <nav class="navbar navbar-dark bg-dark">
-      <h3><b>iHub</b></h3>
+        <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
     </nav>
 
-    <div class="main-div" style="background-color: #5a5a5a; display: inline-block">
+    <div class="main-div">
       <h1></h1>
       <!--<h2><?php// echo @"debug: tokenID - ".$_SESSION['token'] ?></h2>-->
 

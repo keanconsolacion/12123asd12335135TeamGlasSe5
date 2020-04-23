@@ -5,9 +5,9 @@ body{
 
 .main-div{
   text-align: center;
-  border-radius: 30px;
+  border-radius: 10px;
   width: 800px;
-  height: 500px;
+  height: 700px;
   position: absolute;
   margin: auto;
   top: 0;
@@ -18,9 +18,11 @@ body{
   display: inline-block;
 }
 
-.display-card{
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin:auto;
+.alteredInput{
+  width: 700px;
+}
+
+hr{
+  background: #9B9B9B;
+  margin: 15px;
 }

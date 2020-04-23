@@ -10,16 +10,74 @@
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/ihub_index.css">
+    <link rel="stylesheet" type="text/css" href="css/visitSchoolRegister.css">
+    <!-- THIS PAGE JS -->
+    <script src="js/visitSchoolRegister.js"></script>
   </head>
   <body>
 
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
+    </nav>
+    <div class="main-div">
+        <center>
+          <br><br>
+          <hr>
+          <div class="float-left"><h4>&nbsp;&nbsp;&nbsp;&nbsp;Please fill out the form.</h4></div>
+          <br><br><br>
 
+          <div class="input-group mb-3 alteredInput" align="center">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Date of visit</span>
+            </div>
+            <input type="date" class="form-control" name="dateOfVisit" aria-describedby="basic-addon1">
+          </div>
+          <br>
 
+          <div class="input-group mb-3 alteredInput" align="center">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Purpose of visit</span>
+            </div>
+            <select class="form-control" name="purpose">
+              <option></option>
+              <option>Tour</option>
+              <option>Enrollment</option>
+              <option>Inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <br>
 
+          <div class="input-group mb-3 alteredInput" align="center">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Type of ID given</span>
+            </div>
+            <select class="form-control" name="idType">
+              <option></option>
+              <option>Government</option>
+              <option>Passport</option>
+              <option>School ID</option>
+              <option>Company ID</option>
+              <option>Driver's ID</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <br>
 
+          <div class="input-group mb-3 alteredInput" align="center">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Contact number</span>
+            </div>
+            <input type="number" class="form-control" name="contactNumber" aria-describedby="basic-addon1">
+          </div>
 
-
+          <br><br><br><br>
+          <a href="welcome.php" id="clearFieldsButton" class="btn btn-secondary float-left" style="width:150px; margin-left: 10%">Back</a>
+          <button id="clearFieldsButton" class="btn btn-info float-right" style="width:150px; margin-right: 10%" onclick="ClearFields()">Clear</button>
+          <br><br><br>
+          <button id="submit" class="btn btn-warning float-right" style="width:150px; margin-right: 10%">Submit</button>
+        </center>
+    </div>
 
 
 
