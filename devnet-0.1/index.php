@@ -29,7 +29,7 @@
           //a match of "1" means a record that matches the input parameter is present marking a correct login
           $count = mysqli_num_rows($result);
 
-
+          echo $count;
 
               //standard href redireton
               if ($count==1) {
@@ -42,7 +42,7 @@
 
                 $token = $_SESSION['token'];
 
-                $sql = "SELECT count(*) AS allcount WHERE username='$username' FROM user_token";
+                $sql = "SELECT count(*) AS allcount FROM user_token WHERE username='$username'";
                 $result_token = mysqli_query($conn,$sql);
                 $row_token = mysqli_fetch_assoc($result_token);
                 if($row_token['allcount'] > 0){
@@ -50,10 +50,10 @@
                 }else{
                  mysqli_query($conn,"INSERT into user_token(username,token) values('$username','$token')");
                 }
-                header('Location: welcome.php?$token');
+                header('Location: welcome.php');
 
               } else {
-                session_destroy();
+                echo "error";
               }
         }
       }
