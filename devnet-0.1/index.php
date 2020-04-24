@@ -50,7 +50,7 @@
                 }else{
                  mysqli_query($conn,"INSERT into user_token(username,token) values('$username','$token')");
                 }
-                header('Location: welcome.php');
+                header('Location: student-login\welcome.php');
 
               } else {
                 echo "error";
@@ -62,8 +62,6 @@
 
 <!doctype html>
 <html lang="en">
-
-
             <!-- HEAD -->
               <head>
                 <!-- LOGO -->
@@ -92,8 +90,12 @@
 
   <!-- BODY -->
   <body>
-      <div class="login-border" id="logindiv">
-        <div class="login-text p-5 mt-5 text-center">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
+    </nav>
+
+      <div class="login-border" id="logindiv" style="box-shadow: 1px 1px 5px lightblue;">
+        <div class="login-text p-5 mt-5 text-center" style="">
 
             <!-- LOGIN FORM -->
           <form class="loginform" action="" method="post">

@@ -10,16 +10,20 @@
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/visitSchoolRegister.css">
+    <link rel="stylesheet" type="text/css" href="student-login-css/visitSchoolRegister.css">
     <!-- THIS PAGE JS -->
-    <script src="js/visitSchoolRegister.js"></script>
+    <script type="text/javascript" src="student-login-js/visitSchoolRegister.js"></script>
+
   </head>
-  <body>
+
+  <body onload="Initialize()">
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
     </nav>
     <div class="main-div">
+      <form method="POST" action="visitSchoolRegisterProcess.php">
+
         <center>
           <br><br>
           <hr>
@@ -28,7 +32,7 @@
 
           <div class="input-group mb-3 alteredInput" align="center">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Date of visit</span>
+              <span class="input-group-text" id="basic-addon1">*Date of visit</span>
             </div>
             <input type="date" class="form-control" name="dateOfVisit" aria-describedby="basic-addon1">
           </div>
@@ -36,7 +40,7 @@
 
           <div class="input-group mb-3 alteredInput" align="center">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Purpose of visit</span>
+              <span class="input-group-text" id="basic-addon1">*Purpose of visit</span>
             </div>
             <select class="form-control" name="purpose">
               <option></option>
@@ -47,10 +51,9 @@
             </select>
           </div>
           <br>
-
           <div class="input-group mb-3 alteredInput" align="center">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Type of ID given</span>
+              <span class="input-group-text" id="basic-addon1">*Type of ID given</span>
             </div>
             <select class="form-control" name="idType">
               <option></option>
@@ -73,12 +76,13 @@
 
           <br><br><br><br>
           <a href="welcome.php" id="clearFieldsButton" class="btn btn-secondary float-left" style="width:150px; margin-left: 10%">Back</a>
-          <button id="clearFieldsButton" class="btn btn-info float-right" style="width:150px; margin-right: 10%" onclick="ClearFields()">Clear</button>
+          <button id="clearFieldsButton" type="reset" class="btn btn-info float-right" style="width:150px; margin-right: 10%" onclick="ClearFields()">Clear</button>
           <br><br><br>
           <button id="submit" class="btn btn-warning float-right" style="width:150px; margin-right: 10%">Submit</button>
         </center>
-    </div>
 
+      </form>
+    </div>
 
 
     <!-- Optional JavaScript -->

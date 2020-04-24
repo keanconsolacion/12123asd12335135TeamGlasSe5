@@ -16,6 +16,7 @@ body{
   left: 0;
   background-color: #373737;
   display: inline-block;
+  box-shadow: 1px 1px 3px lightblue;
 }
 
 .alteredInput{

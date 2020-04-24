@@ -1,7 +1,7 @@
 <?php
 
 //include 'connection.php';
-include 'authenticate_token.php';  // Check user token
+include '..\authenticate_token.php';  // Check user token
 
 // Check user login or not
 // if(!isset($_SESSION['username'])){
@@ -28,8 +28,7 @@ include 'authenticate_token.php';  // Check user token
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/ihub_index.css">
-    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <link rel="stylesheet" type="text/css" href="student-login-css/welcome.css">
   </head>
   <body>
 
@@ -46,8 +45,8 @@ include 'authenticate_token.php';  // Check user token
       </div>
 
       <div class="display-card float right" style="margin-top: 17.5%; margin-bottom: 15%">
-          <a href="gamechangerVisitSchoolRegister.php" class="btn btn-secondary" style="width: 250px; height: 50px; text-align:center;">Visit School</a><br><br>
-          <a href="#" class="btn btn-secondary" style="width: 250px; height: 50px; text-align:center;">Events</a>
+          <a href="gamechangerVisitSchoolRegister.php" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Visit School</a><br><br>
+          <a href="#" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Events</a>
           <br><br><br><br>
 
           <form action="index.php">
