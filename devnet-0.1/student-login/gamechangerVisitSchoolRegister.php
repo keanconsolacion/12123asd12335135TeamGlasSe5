@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -19,9 +18,9 @@
   <body onload="Initialize()">
 
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
+      <a class="navbar-brand" href="#"><h4><b>EVE - GAMECHANGER LOGIN</b></h4></a>
     </nav>
-    
+
     <div class="main-div">
       <form method="POST" action="visitSchoolRegisterProcess.php">
 

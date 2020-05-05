@@ -31,6 +31,9 @@
   </head>
   <body>
 
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><h4><b>EVE - GAMECHANGER LOGIN</b></h4></a>
+    </nav>
 
     <div class="main-div">
       <h1></h1>

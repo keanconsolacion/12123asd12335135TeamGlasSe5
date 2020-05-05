@@ -24,7 +24,7 @@ include_once 'process/connection.php';
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/ihub_index.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <script
       src="https://code.jquery.com/jquery-3.5.0.js"
