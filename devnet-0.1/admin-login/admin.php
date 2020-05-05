@@ -30,10 +30,8 @@
     <table style="height:100%; width: 100%">
       <tr>
         <td style="width:10%;">
-          <nav class=" d-none d-md-block bg-light sidebar float-left"
-            style="style="height: 1000px; margin-left: 0;
-            width: 300px;">
-                <div class="sidebar-sticky" ">
+          <nav class=" d-none d-md-block bg-light sidebar float-left" style="height: 1000px; margin-left: 0; width: 200px;">
+                <div class="sidebar-sticky">
                   <ul class="nav flex-column">
                     <br><br>
                     <li class="nav-item">
@@ -52,6 +50,10 @@
                       </a>
                     </li>
                   </ul>
+
+                  <a class="nav-link active" href="..\index.php">
+                   <div class="sidebar-items"> <br><br><b>Log out</b></div>
+                  </a>
                 </div>
               </nav>
         </td>
