@@ -1,7 +1,7 @@
 <?php
 //connection settings
 //we use the "$conn variable from connection.php"
-include_once 'connection.php';
+include_once 'process/connection.php';
 
 
 
