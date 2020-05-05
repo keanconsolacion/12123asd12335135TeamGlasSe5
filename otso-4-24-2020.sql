@@ -159,3 +159,43 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_list`
+--
+
+CREATE TABLE `event_list` (
+  `eventtitle` varchar(50) NOT NULL,
+  `eventcreator` varchar(50) NOT NULL,
+  `eventcategory` varchar(25) NOT NULL,
+  `eventaudience` varchar(25) NOT NULL,
+  `date` date NOT NULL,
+  `startat` time NOT NULL,
+  `endat` time NOT NULL,
+  `venue` varchar(25) NOT NULL,
+  `guestcode` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_list`
+--
+
+CREATE TABLE `event_participant` (
+  `firstname` varchar(50) NOT NULL,
+  `middlename` varchar(50) NOT NULL,
+  `lastname` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `idgiven` varchar(20) NOT NULL,
+  `contactnum` varchar(11) NOT NULL,
+  `guestcode` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- --------------------------------------------------------

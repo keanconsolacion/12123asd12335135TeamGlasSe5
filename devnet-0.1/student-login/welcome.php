@@ -45,7 +45,7 @@
 
       <div class="display-card float right" style="margin-top: 17.5%; margin-bottom: 15%">
           <a href="gamechangerVisitSchoolRegister.php" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Visit School</a><br><br>
-          <a href="#" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Events</a>
+          <a href="../events/event-landing.php" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Events</a>
           <br><br><br><br>
 
           <form action="index.php">
