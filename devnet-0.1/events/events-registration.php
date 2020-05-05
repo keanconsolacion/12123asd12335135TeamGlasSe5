@@ -10,7 +10,7 @@
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/ihub_index.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 
   </head>
   <body>
@@ -21,7 +21,7 @@
       <div class="login-text p-5">
 
 
-        <form class="events-regform" action="#" method="post">
+        <form class="events-regform" action="ticket.php" method="post">
           <div class="DevNet-Header">
               <p class="text-center register_header">.devnet//guest_registration</p>
           </div>
@@ -40,10 +40,6 @@
               <div class="form-group">
                 <label for="formGroupExampleInput2">Email</label>
                 <input type="email" class="form-control"  name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Date of Visit</label>
-                <input type="date" class="form-control" name="date" placeholder="">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Type of ID</label>
@@ -71,7 +67,7 @@
 
               <a href="welcome.php" id="clearFieldsButton" class="btn btn-secondary float-left" style="width:150px; margin-left: 10%">Back</a>
               <button id="clearFieldsButton" type="reset" class="btn btn-info float-right" style="width:150px; margin-right: 10%" onclick="ClearFields()">Clear</button>
-              <button id="submit" class="btn btn-warning float-right" style="width:150px; margin-right: 10%">Submit</button>
+              <button class="btn btn-warning float-right" style="width:150px; margin-right: 10%" href="ticket.php">Submit</button>
 
         </form>
 
