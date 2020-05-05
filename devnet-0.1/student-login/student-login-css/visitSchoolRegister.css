@@ -14,7 +14,7 @@ body{
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #373737;
+  background-color: #292a2d;
   display: inline-block;
   box-shadow: 1px 1px 3px lightblue;
 }
@@ -26,4 +26,5 @@ body{
 hr{
   background: #9B9B9B;
   margin: 15px;
+  
 }

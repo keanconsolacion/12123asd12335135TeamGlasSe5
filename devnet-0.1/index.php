@@ -1,8 +1,8 @@
 <?php
     //connection settings
     //we use the "$conn variable from connection.php"
-   include_once 'connection.php';
-   include 'gencode.php';
+   include_once 'process/connection.php';
+   include 'process/gencode.php';
 
       //echo "$generatekey";
       // login Function
@@ -65,7 +65,7 @@
             <!-- HEAD -->
               <head>
                 <!-- LOGO -->
-                <link rel="icon" href="img\devnet_logo.png">
+                <link rel="icon" href="img\eve_logo.png">
                 <!-- Required meta tags -->
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -76,33 +76,144 @@
                 <!-- PT SANS CDN -->
                 <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-                <link rel="stylesheet" type="text/css" href="css/ihub_index.css">
+                <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" href="css/main.css">
 
                 <script
                   src="https://code.jquery.com/jquery-3.5.0.js"
                   integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
                   crossorigin="anonymous"></script>
 
-                  <title>.devnet</title>
+                  <title>EVE</title>
 
               </head>
 
 
   <!-- BODY -->
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
-    </nav>
 
-      <div class="login-border" id="logindiv" style="box-shadow: 1px 1px 5px lightblue;">
-        <div class="login-text p-5 mt-5 text-center" style="">
 
-            <!-- LOGIN FORM -->
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-md navbar-dark  navbar-custom shadow rounded">
+  <a href="/" class="navbar-brand nav-title ml-3">EVE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar6">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-stretch" id="navbar6">
+          <!-- <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Link <span class="sr-only">Home</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+              </li>
+          </ul> -->
+          <ul class="navbar-nav ml-auto">
+
+              <li class="nav-item">
+                  <a class="nav-text" href="//codeply.com">Register</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-text" data-toggle="modal" data-target="#exampleModal" href="#">Login</a>
+              </li>
+          </ul>
+      </div>
+</nav>
+<nav class="navbar fixed-bottom navbar-dark  navbar-custom">
+  <a class="navbar-brand mx-auto d-block text-center w-100 nav-bottom" href="#">©TEAM OTSO</a>
+</nav>
+
+<!-- nav -->
+
+<div class="jumbotron jumbotron-fluid ">
+  <div class="container p-5 shadow ">
+    <h1 class="display-4 text-center">.Changelog</h1>
+    <h5 class="card-subtitle mb-2 text-muted text-center">v0.1.5</h5>
+
+    <p class="lead text-center"><a href="https://github.com/keanconsolacion/otso-repository">https://github.com/keanconsolacion/otso-repository</a>.</p>
+
+                    <div class="list-group list-css">
+                  <div class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Theme and CSS</h5>
+                    <small class="text-muted">6:48PM 5/5/20</small>
+                  </div>
+                  <p class="mb-1 list-text">+ Reworked theme and css from scratch.</p>
+                  <small class="text-muted">Dino Paulo R Gomez</small>
+                </div >
+
+                <a href="#!" class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Student Login Module</h5>
+                  <small class="text-muted">9:18PM 4/23/20</small>
+                </div>
+                <p class="mb-1 list-text">+ added gamechangerVisitSchoolRegister.Php</p>
+                <p class="mb-1 list-text">+ added gamechangerVisitSchoolRegisterSuccess.Php</p>
+                <p class="mb-1 list-text">+ added student-login-css & student-login-js</p>
+                <p class="mb-1 list-text">+ reworked welcome.php</p>
+
+                <small class="text-muted">Kean Consolacion</small>
+                </a>
+
+                <a href="#!" class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Reworked Backend Functionalities</h5>
+                  <small class="text-muted">05:00PM 4/21/20</small>
+                </div>
+                <p class="mb-1 list-text">+ reworked connection module.</p>
+                <p class="mb-1 list-text">+ reworked gamechanger-register.</p>
+                <p class="mb-1 list-text">+ reworked gamechanger-login.</p>
+                <p class="mb-1 list-text">+ reworked token generation.</p>
+                <small class="text-muted">Dino Paulo R Gomez</small>
+                </a>
+                </div>
+
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid ">
+  <div class="container p-5 shadow ">
+    <h1 class="display-4 text-center">.Changelog</h1>
+    <h5 class="card-subtitle mb-2 text-muted text-center">v0.1.4</h5>
+
+    <p class="lead text-center"><a href="https://github.com/keanconsolacion/otso-repository">https://github.com/keanconsolacion/otso-repository</a>.</p>
+
+                    <div class="list-group list-css">
+                  <div class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Guest Registration</h5>
+                    <small>10:47AM 4/17/20</small>
+                  </div>
+                  <p class="mb-1 list-text">+ added register module. </p>
+                  <p class="mb-1 list-text">+ added confirmation module. </p>
+                  <p class="mb-1 list-text">+ added code generation module. </p>
+                  <p class="mb-1 list-text">+ added tokens. </p>
+                  <p class="mb-1 list-text">+ added Session </p>
+
+                  <small class="text-muted">Dino Paulo R Gomez</small>
+                </div >
+
+
+
+  </div>
+</div>
+
+
+<!-- LOGIN MODAL -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+            <h3 class="modal-title w-100">.EVE</h3>
+          </div>
+        <div class="modal-body">
           <form class="loginform" action="" method="post">
               <!-- HEADER -->
-              <div class="DevNet-Header">
-                  <p class="text-center login_header">.devnet</p>
-              </div>
 
               <!-- FIRST INPUT DIV // USERNAME -->
             <div class="container mt-4">
@@ -138,29 +249,26 @@
             </div>
               </div>
             </div>
-            <div class="container mb-3">
-              <div class="row">
-                <div class="col">
+            <div class="container text-center">
+              <div class="row ">
+                <div class="col w-100">
                   <a id="notStud" href="switch\switch_register.php">Not a student?</a>
                 </div>
               </div>
 
             </div>
-            <div class="container mt-2">
-              <div class="row">
-                <div class="col text-center ">
-                  <input class="btn btn-outline-light" id="submit"type="submit" name="submit" value="login"style="width: 100px;">
-                </div>
-              </div>
-            </div>
-
-            </form>
 
 
-                        </div>
-                </div>
-            </div>
+        </div>
+        <div class="modal-footer mt-5">
+          <button type="button" class="btn btn-outline-light"  data-dismiss="modal" style="width: 100px;">Close</button>
+          <input class="btn btn-outline-light" id="submit"type="submit" name="submit" value="Login"style="width: 100px;">
+        </form>
+
+        </div>
       </div>
+    </div>
+</div>
 
 
 
@@ -174,7 +282,7 @@
     	<script src="js/login_jquery.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>

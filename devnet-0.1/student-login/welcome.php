@@ -1,19 +1,18 @@
 <?php
 
-//include 'connection.php';
-include '..\authenticate_token.php';  // Check user token
+include '../process/connection.php';
+include '../process/authenticate_token.php';  // Check user token
 
-// Check user login or not
-// if(!isset($_SESSION['username'])){
-//   echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
-//   header('Location: index.php');
-// }
-//
-// // logout
-// if(isset($_POST['logout'])){
-//  session_destroy();
-//  header('Location: index.php');
-// }
+if(!isset($_SESSION['username'])){
+  echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
+  header('Location: ../index.php?authentication=invalid');
+}
+
+// logout
+if(isset($_POST['logout'])){
+ session_destroy();
+ header('Location: ../index.php');
+}
 
 
  ?>
@@ -32,9 +31,7 @@ include '..\authenticate_token.php';  // Check user token
   </head>
   <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
-    </nav>
+
 
     <div class="main-div">
       <h1></h1>

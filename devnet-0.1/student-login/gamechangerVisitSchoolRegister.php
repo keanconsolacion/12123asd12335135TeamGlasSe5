@@ -18,9 +18,7 @@
 
   <body onload="Initialize()">
 
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
-    </nav>
+
     <div class="main-div">
       <form method="POST" action="visitSchoolRegisterProcess.php">
 
@@ -37,7 +35,6 @@
             <input type="date" class="form-control" name="dateOfVisit" aria-describedby="basic-addon1">
           </div>
           <br>
-
           <div class="input-group mb-3 alteredInput" align="center">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">*Purpose of visit</span>
