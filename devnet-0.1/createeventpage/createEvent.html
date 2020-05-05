@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Event</title>
+	<script type="text/javascript">
+		function buttononClick(){
+			window.location = "createEvent2.html"
+		}
+	</script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="page1.css">
+
+</head>
+
+<body>
+
+<div id="container">
+<div id="header">
+ <nav class="navbar sticky-top navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#!">EVE CREATE EVENT WINDOW</a>
+</nav>
+</div>
+	</div>
+		<div id="content">
+<ul class="nav nav-pills nav-justified">
+  <li class="nav-item">
+    <a class="nav-link active" href="#!">GENERAL INFORMATION</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#!">ADDITIONAL INFORMATION</a>
+  </li>
+</ul>
+<div>
+	
+</div>
+<table border="1" align="center">
+			<tr>
+			<a name="category"></a>
+				<th colspan="3">
+					<center>What is the category event?</center>
+				</th>
+			</tr>
+			<tr>
+				<td><center> <img class="image1" src="gears.png" style="height: 90px; width: 80px; "></center>
+					<br>
+					<center><b>Workshops</b></center>
+					
+				</td>
+				
+				<td><img class="image1" src="document.png" style="height: 90px; width: 80px; " >
+					<br>
+					<center><b>Seminar</b></center>
+					
+
+				<td><img class="image1" src="briefcase.png"  style="height: 90px; width: 80px; ">
+					<br>
+					<center><b>Meeting</b></center>
+					
+			</tr>
+			</table>
+			<br><br><br>
+			<table border="1" align="center">
+			<tr>
+			<a name="audience"></a>
+				<th colspan="3">
+					<center>What are the audience of this event?</center>
+				</th>
+			</tr>
+			<tr>
+				<td><center> <img class="image1" src="gears.png" style="height: 90px; width: 80px; "></center>
+					<br>
+					<center><b>Senior High School</b></center>
+					
+				</td>
+				
+				<td><img class="image1" src="document.png" style="height: 90px; width: 80px; " >
+					<br>
+					<center><b>College</b></center>
+					
+
+				<td><img class="image1" src="briefcase.png"  style="height: 90px; width: 80px; ">
+					<br>
+					<center><b>Guest</b></center>
+					
+			</tr>
+			</table>
+			<br><br><br>
+
+	<form>			
+  <div class="form-group">
+  	<div style="border-style: solid; padding: 10px">
+  		<center>What are the details of this event?</center>
+    <label for="formGroupExampleInput">EVENT TITLE</label>
+    <input type="text" class="form-control" id="formGroupEventInput" placeholder="EVENT TITLE">
+
+<div class="form-group">
+    <label for="formGroupExampleInput2">NAME OF ORGANIZATION</label>
+    <input type="text" class="form-control" id="formGroupOrgInput" placeholder="NAME OF ORGANIZATION">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">EVENT DESCRIPTION</label>
+    <input type="text" class="form-control" id="formGroupDescInput" placeholder="EVENT DESCRIPTION">
+  </div>
+</form>
+  </div>
+  	</div>
+  	
+<br>
+<br>
+<form>			
+  <div class="form-group">
+  	<div style="border-style: solid; padding: 10px">
+  		<center>When and where will this event be?</center>
+    <label for="formGroupExampleInput">Venue</label>
+    <input type="text" class="form-control" id="formGroupVenueInput" placeholder="Venue">
+	<div class="form-group">
+    <label for="formGroupExampleInput2">Start Date</label>
+    <input type="text" class="form-control" id="formGroupStartDateInput" placeholder="Start Date">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">End Date</label>
+    <input type="text" class="form-control" id="formGroupEndDateInput" placeholder="End Date">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Start Time</label>
+    <input type="text" class="form-control" id="formGroupStartTimeInput" placeholder="Start Time">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">End Time</label>
+    <input type="text" class="form-control" id="formGroupEndTimeInput" placeholder="End Time">
+  </div>
+  	</div>
+
+
+  </div>
+  
+  	
+</form>
+
+
+
+			
+		<div id="footer">
+			<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Back</button>
+  <button type="button" class="btn btn-secondary">Submit</button>
+  <button type="button" class="btn btn-secondary" onclick="buttononClick()">Next</button>
+</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>createEvent page 2</title>
+	<script type="text/javascript">
+		function buttononClick(){
+			window.location = "createEvent.html"
+		}
+	</script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="page1.css">
+</head>
+<body>
+	<div id="container">
+
+<div id="header">
+
+ <<nav class="navbar sticky-top navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#!">EVE CREATE EVENT WINDOW</a>
+</nav>
+
+<ul class="nav nav-pills nav-justified">
+  <li class="nav-item">
+    <a class="nav-link" href="#!">GENERAL INFORMATION</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="#!">ADDITIONAL INFORMATION</a>
+  </li>
+</ul>
+
+<br><br>
+
+<center>
+	<div style="border-style: solid; padding: 10px">
+<label for="attendance">How many people are you expecting to attend?</label>
+<br>
+<input type="number" id="attendance" name="attendance"min="0" max="100">	
+</center>	
+	</div>
+
+
+<br><br>
+
+<center>
+	<div style="border-style: solid; padding: 10px">
+<label for="file">Upload an image (Flyers/Collaterals) of your event</label>
+<br>
+<input type="file" class="file" id="file">
+	</div>
+
+</center>
+
+<br>
+<br><br>
+<center>
+	<div style="border-style: solid; padding: 10px">
+<label for="file">Upload proposal form of the event</label>
+<br>
+<br>
+
+<a>Activity Proposal Form</a>
+<br>
+<input type="file" class="file" id="file">
+
+<br>
+<br>
+<a>Budget Proposal</a>
+<br>
+<input type="file" class="file" id="file">
+<br>
+<br>
+<a>Setup Form</a>
+<br>
+<input type="file" class="file" id="file">
+</div>
+<br>
+<br>
+</div>
+</center>
+</div>
+
+
+</div>
+	<div id="footer">
+			<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" onclick="buttononClick()">Back</button>
+  <button type="button" class="btn btn-secondary">Clear</button>
+  
+</div>
+		</div>
+
+
+
+</body>
+</html>
