@@ -18,7 +18,10 @@
 
   <body onload="Initialize()">
 
-
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
+    </nav>
+    
     <div class="main-div">
       <form method="POST" action="visitSchoolRegisterProcess.php">
 
