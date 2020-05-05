@@ -1,7 +1,7 @@
 <?php
 
-include_once 'connection.php';
-include_once 'confirm-code.php';
+include_once 'process/connection.php';
+include_once 'process/confirm-code.php';
 
 $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
 $middlename = mysqli_real_escape_string($conn,$_POST['middlename']);
