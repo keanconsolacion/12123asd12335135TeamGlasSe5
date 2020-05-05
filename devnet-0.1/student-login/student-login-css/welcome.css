@@ -1,0 +1,32 @@
+body{
+    background-color: #174886;
+    color: white;
+}
+
+.main-div{
+  text-align: center;
+  border-radius: 15px;
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #292a2d;
+  display: inline-block;
+  box-shadow: 1px 1px 3px lightblue;
+}
+
+.display-card{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin:auto;
+}
+
+.button-shadow{
+  box-shadow: 1px 1px 1px black;
+  font-size: 17px;
+}
