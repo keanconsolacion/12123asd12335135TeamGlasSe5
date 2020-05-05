@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<?php
+include_once '..\process\connection.php' ?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -22,15 +25,32 @@
     <div class="main-div">
       <form method="POST" action="#">
 
+        <?php
+          // $date=mysqli_real_escape_string($conn,$_POST['dateOfVisit']);
+          // $date=date('Y-m-d',strtotime($date));
+          // $purpose=mysqli_real_escape_string($conn,$_POST['purpose']);
+          // $idType=mysqli_real_escape_string($conn,$_POST['idType']);
+          // $contactNumber = mysqli_real_escape_string($conn,$_POST['contactNumber']);
+         ?>
+
         <center>
           <div>
-            <br><br>  <br><br>  <br><br>  <br><br>
-            This is temporary.
-            <br>
-            but insertion to db works already.
+            <br><br><br><br>
+            <div style="width:50%; height:150px; border: 1px solid; border-radius:15px">
+              <?php echo '<br>Juan Dela Cruz<br>
+                          Date <br>
+                          Purpose<br>
+                          Email'?>
+            </div>
             <br><br>
-            <a href="../index.php" class="btn btn-primary">Go back to index.php</a><br><br>
-            <a href="welcome.php" class="btn btn-primary">Go back to welcome.php</a>
+            <div style="width:50%; height:150px; border: 1px solid; border-radius:15px">
+                <?php echo '<br> Your Code is <br>' ?>
+            </div>
+            <br>
+
+            <br><br>
+            <a href="../index.php" class="btn btn-primary">Home</a><br><br>
+            <a href="welcome.php" class="btn btn-primary">Another Transaction</a>
           </div>
         </center>
 

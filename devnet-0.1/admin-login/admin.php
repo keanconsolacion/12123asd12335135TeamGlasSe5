@@ -63,12 +63,12 @@
             <tbody height:>
               <tr class="row" style="height:100px;">
                 <td class="col-8"style="border: 1px solid;">
-                    <span style="font-size:25px" >DATE:</span> <b><span style="font-size:20px" id="dateToday">May 4</span></b>
+                    <span style="font-size:25px" >DATE:</span> <b><span style="font-size:20px" id="dateToday"><?php echo date("M d") ?></span></b>
                 </td>
                 <td class="col-4"style="border: 1px solid;">
                   <center>
                     <div>
-                      <span style="font-size:25px" >TIME</span> <b><span style="font-size:20px" id="timeNow">12:00PM</span></b>
+                      <span style="font-size:25px" >TIME</span> <b><span style="font-size:20px" id="timeNow"><?php echo date("h:i A") ?></span></b>
                     <div>
                   </center>
                 </td>
@@ -77,21 +77,21 @@
               <tr class="row" style="height:100px;">
                 <td class="col-4"style="border: 1px solid;">
                   <center>
-                    <span style="font-size:25px">Visitors:</span> <b><span style="font-size:20px" id="activeVisitors">25</span></b>
+                    <span style="font-size:25px">Visitors:</span> <b><span style="font-size:20px" id="activeVisitors">0</span></b>
                     <br><br>
                     <button class='btn btn-info' id='refreshVisitor'>Refresh</button>
                   </center>
                 </td>
                 <td class="col-4"style="border: 1px solid;">
                   <center>
-                    <span style="font-size:25px">Checked-in:</span> <b><span style="font-size:20px" id="checkedIn">25</span></b>
+                    <span style="font-size:25px">Checked-in:</span> <b><span style="font-size:20px" id="checkedIn">0</span></b>
                     <br><br>
                     <button class='btn btn-warning' id='checkInButton'><b>Add</b></button>
                   </center>
                 </td>
                 <td class="col-4"style="border: 1px solid;">
                   <center>
-                    <span style="font-size:25px">Check-out:</span> <b><span style="font-size:20px" id="checkedOut">25</span></b>
+                    <span style="font-size:25px">Check-out:</span> <b><span style="font-size:20px" id="checkedOut">0</span></b>
                     <br><br>
                     <button class='btn btn-warning' id='checkOutButton'><b>Remove</b></button>
                   </center>
@@ -103,35 +103,16 @@
             <table class="table" style="height:70%;">
               <tbody height: 500px>
                 <tr class="row" style="height:80%;">
-
                   <td class="col-6">
                     <center>
                       <span style="font-size:35px"><b>LATEST ACTIVITIES</b></span>
                       <br><br>
                       <div style="border:1px solid; width:80%; height: 85%;"> <!--MAXIMUM IS 8 ACTIVITIES-->
+
                         <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
                           Sample recent activity.
                         </div>
-                        <!-- <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity. -->
+
                         </div>
                       <div>
                     </center>
@@ -142,29 +123,27 @@
                       <span style="font-size:35px"><b>EVENTS TODAY</b></span>
                       <br><br>
                       <div style="border:1px solid; width:80%; height: 85%;">
-                        <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <!-- <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
-                        </div>
-                        <div style="margin:10px; border:2px dashed; height:10%; width:90%" >
-                          Sample EVENT.
+                        <?php
+                          include_once "..\process\connection.php";
+                          $maxList = 8;
+
+                            $dateToday = date('Y-m-d');
+                            $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday";
+
+                            $resultSet = mysqli_query($conn,$sqlStmnt);
+
+                            while ($result = mysqli_fetch_assoc($resultSet))
+                            {
+                              echo $result['email'];
+                              echo '<div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >'.
+                                      $result['eventtitle'].'
+                                    </div>';
+                            }
+
+                        ?>
+
+                        <!-- <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
+                          Sample TEMPLATE FOR AN EVENT.
                         </div> -->
                       <div>
                     </center>

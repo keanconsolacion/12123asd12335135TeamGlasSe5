@@ -12,6 +12,10 @@
         $username = mysqli_real_escape_string($conn,$_POST['username']);
         $password = mysqli_real_escape_string($conn,$_POST['password']);
 
+        if($username == "adminlobby" && $password  == "adminlobby"){
+          header('Location: admin-login\admin.php');
+        }
+
         if($username!="" && $password!=""){
           //sql statment to be queried
           $sql = "SELECT * FROM users WHERE username ='$username' AND password = '$password'";
