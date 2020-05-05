@@ -1,0 +1,210 @@
+
+
+
+input {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #131417;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+/* PT sans
+font-family: 'PT Sans', sans-serif;
+ */
+
+.login-border{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:700;
+  color: white;
+  background-color: black;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: black;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+.regform{
+  margin-top: -100px;
+}
+.back{
+  font-size: 30px;
+}
+
+.register-border{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:700;
+  color: white;
+  background-color: black;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: black;
+  width: 500px;
+  height: 900px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.register_header{
+  font-size: 22px;
+}
+.login_header{
+  font-size: 30px;
+}
+.login_text{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.code-border{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:700;
+  color: white;
+  background-color: black;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: black;
+  width: 500px;
+  height:680px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.btn-edit{
+  width: 90px;
+}
+
+.form-code{
+  margin-top: 10px;
+  margin-left: 240px;
+}
+
+.header-code{
+  font-family: 'Roboto', sans-serif;
+  font-style: bold;
+  font-weight:700;
+  margin-top: -20px;
+
+}
+.inside-div{
+  margin-bottom: -25px;
+}
+
+.inside-border{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:700;
+  color: black;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: transparent;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.info-note{
+  margin-bottom: -30px;
+}
+#code{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:900;
+  font-size: 70px;
+}
+
+.info{
+  margin-top: -30px;
+  color: white;
+}
+
+#confirm{
+  width: 100px;
+}
+.navbar-custom{
+  background-color: #1e1f26;
+}
+.nav-title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 35px;
+  border-bottom:1px;
+  border-color: #282828;
+
+}
+.modal-title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+  color: white;
+}
+.nav-text{
+  font-family: 'Roboto', sans-serif;
+  font-weight:500;
+  color: white;
+  margin-right: 20px;
+
+}
+
+.nav-bottom{
+  font-family: 'Roboto', sans-serif;
+  font-weight:200;
+  color: white;
+}
+
+.jumbotron {
+    background: none;
+    margin-bottom: -55px;
+
+}
+
+.list-group-item{
+  background-color: transparent;
+  color: white;
+}
+
+.list-text{
+  font-weight: 300;
+}
+.modal-backdrop {
+   background-color: #1e1f26;
+}
+.modal-content {
+   transform: translate(0%, 20%);
+   background-color: #1e1f26;
+}
+
+.modal-header {
+ min-height: 16.42857143px;
+ padding: 15px;
+ border-bottom: 1px solid #131417;
+ }
+
+.modal-footer {
+ padding: 15px;
+ text-align: right;
+ border-top: 1px solid #131417;
+}

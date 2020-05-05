@@ -26,7 +26,6 @@ $dbpass = "";
   //to match your database.
 $dbname = "otso";
 
-
   //these variable will be used as an import in other php files when connecting to the database.
   //mysqli_connect is the newer version of mysql_connect, so avoid using any mysql functions and use mysqli.
   //all of these information is available at https://www.php.net/docs.php and https://www.w3schools.com/php/

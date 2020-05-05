@@ -1,7 +1,7 @@
 <?php
 
-include_once 'connection.php';
-include_once 'gencode.php';
+include_once 'process/connection.php';
+include_once 'process/gencode.php';
 // registration variables, with mysqli to prevent SQL Attack
 
       $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);

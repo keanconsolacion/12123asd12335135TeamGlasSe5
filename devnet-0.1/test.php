@@ -1,100 +1,21 @@
-<?php
-    //connection settings
-    //we use the "$conn variable from connection.php"
-   include_once 'process/connection.php';
-   include 'process/gencode.php';
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EVE</title>
+    <link rel="icon" href="img\eve_logo.png">
 
-      //echo "$generatekey";
-      // login Function
-      if(isset($_POST['submit'])){
-
-
-        $username = mysqli_real_escape_string($conn,$_POST['username']);
-        $password = mysqli_real_escape_string($conn,$_POST['password']);
-
-        if($username!="" && $password!=""){
-          //sql statment to be queried
-          $sql = "SELECT * FROM users WHERE username ='$username' AND password = '$password'";
-          //mysqli_query is a mysql function that sends a query request to the database
-          //it requires two parameters,
-          //@1. the mysqli_connect status which is stored in $conn variable found on "connections.php".
-          //@2. the sql statement  which is a string stored on the $sql variable
-          $result = mysqli_query($conn,$sql);
-          //the query result is stored in the $result variable.
-
-          //The fetch_array() / mysqli_fetch_array() function fetches a result row as an associative array, a numeric array,.
-          //it requires the query result status and the MYSQLI_ASSOC "MYSQLI_ASSOC = Array items will use the column name as an index key."
-          $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-          //after fetching row it returns an integer value in which identifies how many matches were found.
-          //a match of "1" means a record that matches the input parameter is present marking a correct login
-          $count = mysqli_num_rows($result);
-
-          echo $count;
-
-              //standard href redireton
-              if ($count==1) {
-                $token = token_keygen(17,7);
-                $_SESSION['username'] = $username;
-                $_SESSION['token'] = $token;
-
-                echo $_SESSION['username'];
-                echo $_SESSION['token'];
-
-                $token = $_SESSION['token'];
-
-                $sql = "SELECT count(*) AS allcount FROM user_token WHERE username='$username'";
-                $result_token = mysqli_query($conn,$sql);
-                $row_token = mysqli_fetch_assoc($result_token);
-                if($row_token['allcount'] > 0){
-                 mysqli_query($conn,"UPDATE user_token set token='$token' where username='$username'");
-                }else{
-                 mysqli_query($conn,"INSERT into user_token(username,token) values('$username','$token')");
-                }
-                header('Location: student-login\welcome.php');
-
-              } else {
-                echo "error";
-              }
-        }
-      }
-
- ?>
-
-<!doctype html>
-<html lang="en">
-            <!-- HEAD -->
-              <head>
-                <!-- LOGO -->
-                <link rel="icon" href="img\eve_logo.png">
-                <!-- Required meta tags -->
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <!-- BOOTSTRAP -->
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-                <!-- FONTAWESOME -->
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                <!-- PT SANS CDN -->
-                <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
-                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-                <link rel="stylesheet" type="text/css" href="css/main.css">
-
-                <script
-                  src="https://code.jquery.com/jquery-3.5.0.js"
-                  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-                  crossorigin="anonymous"></script>
-
-                  <title>EVE</title>
-
-              </head>
-
-
-  <!-- BODY -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- PT SANS CDN -->
+    <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
   <body>
 
 
-<!-- navbar -->
-
+<!-- nav -->
 <nav class="navbar navbar-expand-md navbar-dark  navbar-custom shadow rounded">
   <a href="/" class="navbar-brand nav-title ml-3">EVE</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar6">
@@ -269,13 +190,6 @@
       </div>
     </div>
 </div>
-
-
-
-
-
-
-
     <!-- Optional JavaScript -->
 
     <!--===============================================================================================-->
