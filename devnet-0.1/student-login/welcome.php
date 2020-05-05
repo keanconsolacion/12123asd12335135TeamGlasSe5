@@ -1,18 +1,18 @@
 <?php
 
-include '../process/connection.php';
-include '../process/authenticate_token.php';  // Check user token
-
-if(!isset($_SESSION['username'])){
-  echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
-  header('Location: ../index.php?authentication=invalid');
-}
-
-// logout
-if(isset($_POST['logout'])){
- session_destroy();
- header('Location: ../index.php');
-}
+// include '../process/connection.php';
+// include '../process/authenticate_token.php';  // Check user token
+//
+// if(!isset($_SESSION['username'])){
+//   echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
+//   header('Location: ../index.php?authentication=invalid');
+// }
+//
+// // logout
+// if(isset($_POST['logout'])){
+//  session_destroy();
+//  header('Location: ../index.php');
+// }
 
 
  ?>
@@ -30,7 +30,6 @@ if(isset($_POST['logout'])){
     <link rel="stylesheet" type="text/css" href="student-login-css/welcome.css">
   </head>
   <body>
-
 
 
     <div class="main-div">
