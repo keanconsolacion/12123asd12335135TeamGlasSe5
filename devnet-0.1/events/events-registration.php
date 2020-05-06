@@ -1,3 +1,12 @@
+<?php
+//connection settings
+//we use the "$conn variable from connection.php"
+include_once '../process/connection.php';
+
+
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +20,24 @@
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.js"
+      integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+      crossorigin="anonymous"></script>
+    <script>
+    // JQUERY INTERNAL
+    $(function(){
+     $(".register-border").hide() // hide registration form onload
+     $(".register-border").fadeIn("slow");
+    });
 
+
+
+
+
+      });
+
+</script>
   </head>
   <body>
     <div class="register-border" id="logindiv">
@@ -52,22 +78,26 @@
                 </select>
               </div>
               <div class="form-group">
+                <label for="formGroupExampleInput2">Date of Visit</label>
+                <input type="date" class="form-control" name="date" placeholder="">
+              </div>
+              <div class="form-group">
                 <label for="formGroupExampleInput2">Contact Number</label>
                 <input type="text" class="form-control" name="contactnum" placeholder="optional">
               </div>
 
 
-              <!-- <div class="container mt-4">
+              <div class="container mt-4">
                 <div class="row">
                   <div class="col text-center">
                     <input class="btn btn-outline-light" id="submit" type="submit" name="register" value="register"style="width: 100px;">
                   </div>
                 </div>
-              </div> -->
+              </div>
 
-              <a href="welcome.php" id="clearFieldsButton" class="btn btn-secondary float-left" style="width:150px; margin-left: 10%">Back</a>
+                <a href="event-landing.php" id="clearFieldsButton" class="btn btn-secondary float-left" style="width:150px; margin-left: 10%">Back</a>
               <button id="clearFieldsButton" type="reset" class="btn btn-info float-right" style="width:150px; margin-right: 10%" onclick="ClearFields()">Clear</button>
-              <button class="btn btn-warning float-right" style="width:150px; margin-right: 10%" href="ticket.php">Submit</button>
+              <!-- <button class="btn btn-warning float-right" style="width:150px; margin-right: 10%" href="ticket.php">Submit</button> -->
 
         </form>
 

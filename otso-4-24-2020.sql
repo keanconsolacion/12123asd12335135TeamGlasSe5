@@ -197,5 +197,11 @@ CREATE TABLE `event_participant` (
   `guestcode` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `event_participant`
+--
+
+INSERT INTO `event_participant` (`firstname`, `middlename`, `lastname`, `email`, `date`) VALUES
+('test','test2','test3', 'test@gmail.com', '0023-12-31');
 
 -- --------------------------------------------------------

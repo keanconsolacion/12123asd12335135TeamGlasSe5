@@ -1,7 +1,7 @@
 <?php
 
-include_once 'process/connection.php';
-include_once 'process/gencode.php';
+include_once '../process/connection.php';
+include_once '../process/gencode.php';
 // registration variables, with mysqli to prevent SQL Attack
 
       $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
@@ -51,9 +51,9 @@ include_once 'process/gencode.php';
         <div class="login-text p-5 text-center inside-div">
               <h1 class="header-code">WELCOME!</h1>
                   <h6 class="mt-3"><?php echo $firstname.' '.$middlename.' '.$lastname;?></h6>
-                  <!-- <h6 class="mt-3"><?php echo $date;?></h6>
+                  <h6 class="mt-3"><?php echo $date;?></h6>
                   <h6 class="mt-3"><?php echo $purpose;?></h6>
-                  <h6 class="mt-3"><?php echo $email;?></h6> -->
+                  <h6 class="mt-3"><?php echo $email;?></h6>
             </div>
       </div>
       <div class="inside-border">
