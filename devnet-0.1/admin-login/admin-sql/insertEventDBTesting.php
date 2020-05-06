@@ -11,18 +11,4 @@ include_once '..\..\process\connection.php';
 
   $request =mysqli_query($conn,$sqlStmnt);
 
-
-
-  $dateToday = date('Y-m-d');
-  $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday";
-
-  $resultSet = mysqli_query($conn,$sqlStmnt);
-
-  if (mysqli_num_rows($resultSet) > 0) {
-    echo 'greater than zero';
-    while($row = mysqli_fetch_assoc($resultSet)) {
-       echo "Name: " . $row["date"]. "<br>";
-    }
-  }
-
  ?>
