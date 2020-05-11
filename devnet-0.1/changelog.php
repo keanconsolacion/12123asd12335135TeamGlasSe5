@@ -99,8 +99,7 @@
 <!-- navbar -->
 
 
-
-<nav class="navbar navbar-expand-md navbar-dark  navbar-custom shadow rounded row fixed-top mb-5">
+<nav class="navbar navbar-expand-md navbar-dark  navbar-custom shadow rounded row">
   <div class="col-xl-3">
 
   </div>
@@ -122,7 +121,7 @@
             </ul> -->
             <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-text navlink" href="changelog.php">Changelog</a>
+                  <a class="nav-text navlink " href="changelog.php">Changelog</a>
               </li
               <li class="nav-item">
                   <a class="nav-text navlink" href="register.php">Guest</a>
@@ -143,106 +142,79 @@
 
 <!-- nav -->
 
-<div class="jumbotron jumbotron-fluid mt-5 ">
+<div class="jumbotron jumbotron-fluid ">
   <div class="container p-5 jumbocontatiner shadow ">
-    <h1 class="display-4 font-weight-bold">What is <span class="purple">EVE</span>?</h1>
-  <p class="lead jumbolead">it is a web-based <span class="purple">Visitor Management System</span> (VMS) designed to
-    track and manage visitors and events. It is a digitized system used to create
-    an automated and secure sign-in process while presenting authentic data which
-    can be used as an analysis in optimizing visitor registration, safeguarding
-    establishment, and even organizing events. </p>
-    <span class="purple"></span>
-    <p class="lead jumbolead">The system is a <span class="purple">comprehensive</span> and <span class="purple">exceptional</span>
-      that embodies efficiency in multiple ways. It makes visiting campus, participating in events,
-      or even creating events an easy and trouble-free activity. This system smoothens front desk
-      operations by transforming complex and <span class="purple">long waiting registration times</span> into a simple
-      and hassle-free action. This system increases the level of security enforced inside a
-      premise. It also provides data management in order to make retrieval of data efficient.
- </p>
+    <h1 class="display-4 text-center">.Changelog</h1>
+    <h5 class="card-subtitle mb-2 text-muted text-center">v0.1.5</h5>
+<div class="">
+  <p class="lead text-center "><a class="sublink" href="https://github.com/keanconsolacion/otso-repository">https://github.com/keanconsolacion/otso-repository</a>.</p>
+</div>
+
+                    <div class="list-group list-css">
+                  <div class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Theme and CSS</h5>
+                    <small class="text-muted">6:48PM 5/5/20</small>
+                  </div>
+                  <p class="mb-1 list-text">+ Reworked theme and css from scratch.</p>
+                  <small class="text-muted">Dino Paulo R Gomez</small>
+                </div >
+
+                <a href="#!" class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Student Login Module</h5>
+                  <small class="text-muted">9:18PM 4/23/20</small>
+                </div>
+                <p class="mb-1 list-text">+ added gamechangerVisitSchoolRegister.Php</p>
+                <p class="mb-1 list-text">+ added gamechangerVisitSchoolRegisterSuccess.Php</p>
+                <p class="mb-1 list-text">+ added student-login-css & student-login-js</p>
+                <p class="mb-1 list-text">+ reworked welcome.php</p>
+
+                <small class="text-muted">Kean Consolacion</small>
+                </a>
+
+                <a href="#!" class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Reworked Backend Functionalities</h5>
+                  <small class="text-muted">05:00PM 4/21/20</small>
+                </div>
+                <p class="mb-1 list-text">+ reworked connection module.</p>
+                <p class="mb-1 list-text">+ reworked gamechanger-register.</p>
+                <p class="mb-1 list-text">+ reworked gamechanger-login.</p>
+                <p class="mb-1 list-text">+ reworked token generation.</p>
+                <small class="text-muted">Dino Paulo R Gomez</small>
+                </a>
+                </div>
 
   </div>
 </div>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container p-5 jumbocontatiner shadow">
-    <div class="blog-post">
-      <h2 class="blog-post-title display-4">Our System</h2>
-      <p class="blog-post-meta">May 8, 2020 by <span class="purple font-weight-bold">OTSO</span> </p>
+<div class="jumbotron jumbotron-fluid ">
+  <div class="container p-5 jumbocontatiner shadow ">
+    <h1 class="display-4 text-center">.Changelog</h1>
+    <h5 class="card-subtitle mb-2 text-muted text-center">v0.1.4</h5>
 
-      <p><span class="purple font-weight-bold">EVE</span> features two different functionalities for visitors that provides ease and comfort
-        that can be rarely seen when using a traditional log book system.
-        In <span class="purple font-weight-bold">EVE's</span> system, visitors may choose between visiting the school or participating in
-        an event, and they even have the choice to register on-site or to pre-register.
-        This feature allows valued guests, customers, and clients to save time and resources.
-      </p>
+    <p class="lead text-center"><a class="sublink" href="https://github.com/keanconsolacion/otso-repository">https://github.com/keanconsolacion/otso-repository</a>.</p>
 
-      <h2>Types of Users</h2>
-      <hr>
-      <p><span class="purple font-weight-bold">EVE</span> categorizes its users into two types. The first type of user is known as <span class="purple">Visitor</span>
-        which describes any outsider who is not enrolled in iACADEMY. Meanwhile, the second type of
-        user is known as <span class="purple font-weight-bold">Gamechanger</span> which could be further classified into two. It could either
-        denote to a person who is enrolled in iACADEMY or a certain staff of the institution that
-        plays a role as an admin of the system.</p>
-      <h3>Visitor</h3>
-      <p><span class="purple font-weight-bold">EVE</span> features two different functionalities for visitors that provides ease and
-        comfort that can be rarely seen when using a traditional log book system.
-        In <span class="purple font-weight-bold">EVE's</span> system, visitors may choose between visiting the school or
-        participating in an event, and they even have the choice to register on-site
-        or to pre-register. This feature allows valued guests, customers, and clients
-         to save time and resources.
-</p>
+                    <div class="list-group list-css">
+                  <div class="list-group-item list-group-item-action flex-column align-items-start shadow">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Guest Registration</h5>
+                    <small class="text-muted">10:47AM 4/17/20</small>
+                  </div>
+                  <p class="mb-1 list-text">+ added register module. </p>
+                  <p class="mb-1 list-text">+ added confirmation module. </p>
+                  <p class="mb-1 list-text">+ added code generation module. </p>
+                  <p class="mb-1 list-text">+ added tokens. </p>
+                  <p class="mb-1 list-text">+ added Session </p>
 
-      <h3>Gamechanger</h3>
-      <p>Users of the system who are either currently enrolled in iACADEMY or a
-        staff of the institution that is given a role as an admin of the system is
-        labelled as “<span class="purple font-weight-bold">Gamechanger</span>”, and aside from the two different functionalities of a visitor,
-        gamechangers have the ability to create events.</p>
+                  <small class="text-muted">Dino Paulo R Gomez</small>
+                </div >
 
-      <p>Before making a selection,
-        they are asked to log-in the system and to input their respective iACADEMY email and password.
-        The visit school selection prompts the user to input their respective details,
-        and it would still follow the same procedure done by the visitors. Meanwhile,
-        if the user opts to select events.</p>
 
-        <blockquote>
-        <p>The user may choose from the following</p>
-      <ol>
-        <li>Create Event.</li>
-        <li>See Events.</li>
-        <li>Participate Event.</li>
-      </ol>
-      </blockquote>
-      <h3>Admins</h3>
 
-      <p>The admins of iHub are collectively called as “<span class="purple font-weight-bold">Gamechanger</span>”
-        that is classified into three different types with various roles and
-        permissions depending on their department.</p>
-
-        <ul>
-          <li><span class="purple font-weight-bold">Office of Student Experience and Advancement</span> (OSEA) as <span class="purple font-weight-bold">Event Manager</span></li>
-          <p>As one of the admins of iHub, the Office of Student Experience and Advancement also
-            known as OSEA, has the ability to regulate the event features of the application.
-            Their task is to check the events that are created in the application, and they hold the
-            capability on whether to approve or decline these events. Some events are organized by the
-            department, so they are also given the ability to create events.</p>
-            <li> <span class="purple font-weight-bold">Security Officer</span> as  <span class="purple font-weight-bold">Groundskeeper</span></li>
-            <p>As one of the admins of iHub, the Office of Student Experience and Advancement also
-              known as OSEA, has the ability to regulate the event features of the application.
-              Their task is to check the events that are created in the application, and they hold the
-              capability on whether to approve or decline these events. Some events are organized by the
-              department, so they are also given the ability to create events.</p>
-              <li><span class="purple font-weight-bold">I.T. department</span> as  <span class="purple font-weight-bold">Supervisor</span></li>
-              <p>As one of the admins of iHub, the Office of Student Experience and Advancement also
-                known as OSEA, has the ability to regulate the event features of the application.
-                Their task is to check the events that are created in the application, and they hold the
-                capability on whether to approve or decline these events. Some events are organized by the
-                department, so they are also given the ability to create events.</p>
-        </ul>
-    </div>
   </div>
 </div>
-
-
 
 
 <!-- LOGIN MODAL -->
@@ -254,7 +226,7 @@
   <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h3 class="modal-title w-100"><span class="purple">.</span>EVE</h3>
+            <h3 class="modal-title w-100"><span class="purple">.</span>EVE</h3>
           </div>
         <div class="modal-body">
           <form class="loginform" action="" method="post">

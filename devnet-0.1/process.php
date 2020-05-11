@@ -12,7 +12,7 @@ $date=date('Y-m-d',strtotime($date));
 $purpose = mysqli_real_escape_string($conn,$_POST['purpose']);
 $idgiven = mysqli_real_escape_string($conn,$_POST['idgiven']);
 $contactnum = mysqli_real_escape_string($conn,$_POST['contactnum']);
-
+$generatekey=mysqli_real_escape_string($conn,$_POST['generatekey']);
 
 
 $sql= "INSERT INTO guest_register (firstname,middlename,lastname,email,date,purpose,idgiven,contactnum,guestcode)
@@ -20,6 +20,7 @@ VALUES ('$firstname', '$middlename', '$lastname', '$email', '$date', '$purpose',
 
 $result = mysqli_query($conn,$sql);
 
+$_SESSION['isRegistered'] = 0;
 header("Location:index.php");
 
 
