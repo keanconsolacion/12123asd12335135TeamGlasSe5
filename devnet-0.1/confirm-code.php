@@ -18,8 +18,10 @@ include_once 'process/gencode.php';
 
 
       // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
-      $sqlStmnt = "INSERT INTO guest_register (firstname, middlename, lastname, email, date, purpose,  idgiven, contactnum, guestcode)
+      $sqlStmnt = "INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`,  `idgiven`, `contactnum`, `guestcode`)
                     VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey')";
+
+        $request =mysqli_query($conn,$sqlStmnt);
 
 
 
