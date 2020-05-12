@@ -112,7 +112,24 @@
                       <div style="border:1px solid; width:80%; height: 85%;"> <!--MAXIMUM IS 8 ACTIVITIES-->
 
                         <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
+                          <?php
+                              // $dateToday = date('Y-m-d');
+                              // $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday'";
+                              //
+                              // $resultSet = mysqli_query($conn,$sqlStmnt);
+                              //
+                              // $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
+                              // $counter = 0;
+                              //
+                              // while($result = mysqli_fetch_array($resultSet))
+                              // {
+                              //   if($counter < $maxList) //to make sure it won't overflow
+                              //     echo '<div style="margin:7.5px; border:2px dashed; height:12.5%; width:90%" ><b>'.
+                              //           //variables here
+                              //          '</div>';
+                              //   ++$counter;
+                              // }
+                          ?>
                         </div>
 
                         </div>
