@@ -1,3 +1,5 @@
+<?php @(include_once "..\process\connection.php"); ?>
+
 <html lang="en">
   <head>
     <title></title>
@@ -30,7 +32,7 @@
     <table style="height:100%; width: 100%">
       <tr>
         <td style="width:10%;">
-          <nav class=" d-none d-md-block bg-light sidebar float-left" style="height: 1000px; margin-left: 0; width: 200px;">
+          <nav class=" d-none d-md-block bg-light sidebar float-left" style="height: 100%; margin-left: 0; width: 200px;">
                 <div class="sidebar-sticky">
                   <ul class="nav flex-column">
                     <br><br>
@@ -40,12 +42,12 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">
+                      <a class="nav-link active" href="admin-visitor.php">
                        <div class="sidebar-items"> <b>Visitor</b></div>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">
+                      <a class="nav-link active" href="admin-events.php">
                        <div class="sidebar-items"> <b>Events</b></div>
                       </a>
                     </li>
@@ -124,32 +126,30 @@
                       <br><br>
                       <div style="border:1px solid; width:80%; height: 85%;">
                         <?php
-                          include_once "..\process\connection.php";
-                          $maxList = 8;
-
                             $dateToday = date('Y-m-d');
-                            $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday";
+                            $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday'";
 
                             $resultSet = mysqli_query($conn,$sqlStmnt);
 
-                            while ($result = mysqli_fetch_assoc($resultSet))
+                            $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
+                            $counter = 0;
+
+                            while($result = mysqli_fetch_array($resultSet))
                             {
-                              echo $result['email'];
-                              echo '<div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >'.
-                                      $result['eventtitle'].'
-                                    </div>';
+                              if($counter < $maxList) //to make sure it won't overflow
+                                echo '<div style="margin:7.5px; border:2px dashed; height:12.5%; width:90%" ><b>'.
+                                      $result['eventTitle'].'</b>   '.$result['date'].'<br>by: '.$result['eventCreator'].
+                                     '</div>';
+                              ++$counter;
                             }
-
                         ?>
-
                         <!-- <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
                           Sample TEMPLATE FOR AN EVENT.
                         </div> -->
                       <div>
                     </center>
                   </td>
-
-                  </tr>
+                </tr>
               </tbody>
             </table>
            <!--END OF SECOND TABLE -->
