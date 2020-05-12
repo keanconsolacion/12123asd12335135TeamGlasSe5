@@ -17,10 +17,11 @@ include_once 'process/gencode.php';
       $generatekey = guest_keygen(6,2);
 
 
-
-
       // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
+      $sqlStmnt = "INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`,  `idgiven`, `contactnum`, `guestcode`)
+                    VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey')";
 
+        $request =mysqli_query($conn,$sqlStmnt);
 
 
 
