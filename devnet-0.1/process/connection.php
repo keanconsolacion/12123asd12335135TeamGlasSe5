@@ -25,10 +25,10 @@ $dbpass = "";
   //my db name since it is already set for me, you can create your own database and change the settings here
   //to match your database.
 $dbname = "otso";
-<<<<<<< HEAD
-=======
-
->>>>>>> leonard_branch
+// <<<<<<< HEAD
+// =======
+//
+// >>>>>>> leonard_branch
 
   //these variable will be used as an import in other php files when connecting to the database.
   //mysqli_connect is the newer version of mysql_connect, so avoid using any mysql functions and use mysqli.
@@ -41,4 +41,5 @@ $conn = mysqli_connect($server, $dbuser, $dbpass, $dbname);
 if (!$conn) {
  die("Connection failed: " . mysqli_connect_error());
 }
- ?>
+
+?>
