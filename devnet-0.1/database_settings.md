@@ -52,6 +52,8 @@
     startat time
     endat time
     venue varchar(25)
+    status text(20)
+    dateCreated DATE
     timeCreated TIME
 
 @table

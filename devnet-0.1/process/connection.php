@@ -42,4 +42,14 @@ $conn = mysqli_connect($server, $dbuser, $dbpass, $dbname);
 if (!$conn) {
  die("Connection failed: " . mysqli_connect_error());
 }
+
+
+function getConnection(){
+  $server = "localhost";
+  $dbuser = "root";
+  $dbpass = "";
+  $dbname = "otso";
+  return mysqli_connect($server, $dbuser, $dbpass, $dbname);;
+}
+
  ?>

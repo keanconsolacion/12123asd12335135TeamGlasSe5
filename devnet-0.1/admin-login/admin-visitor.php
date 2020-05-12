@@ -107,18 +107,20 @@
                     <?php
                         include_once "..\process\connection.php";
                         $dateToday = date('Y-m-d');
-                        $sqlStmnt = "SELECT * FROM `guest_register` ORDER BY `date` DESC";
+                        $sqlStmnt = "SELECT * FROM `guest_register` ORDER BY `dateCreated` DESC";
                         $resultSet2 = mysqli_query($conn,$sqlStmnt);
                         $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
                         $counter = 0;
+
+                        $num_rows = 0;
 
                         while($result2 = mysqli_fetch_array($resultSet2))
                         {
                             echo '<td class="col-2">'.$result2['guestcode'].'</td>
                                   <td class="col-3">'.$result2['lastname'].', '.$result2['firstname'].' '.$result2['middlename'].'</td>
                                   <td class="col-2">'.$result2['purpose'].'</td>
-                                  <td class="col-2">'.$result2['date'].'</td>
-                                  <td class="col-2">'.'NO TIME yet'.'</td>'.
+                                  <td class="col-2">'.$result2['dateCreated'].'</td>
+                                  <td class="col-2">'.$result2['timeCreated'].'</td>'.
                                   '<td class="col-1" style="height:100px">'.
                                     '<center>
                                        <button class="btn btn-warning" style="padding:5px; margin-bottom:5px"><b>Check in</b></button>
@@ -126,6 +128,7 @@
                                        <button class="btn btn-warning" style="padding:5px; margin-bottom:5px"><b>Check out</b></button>
                                      </center>
                                    </td>';
+                            $num_rows++;
                         }
                      ?>
                   </td>
