@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/admin-css/admin-stylesheet.css">
     <script type="text/javascript" src="admin-js/admin.js"></script>
 
+
     <style media="screen">
     .sidebar{
       margin-left: 0;
@@ -109,12 +110,12 @@
                     <center>
                       <span style="font-size:35px"><b>LATEST ACTIVITIES</b></span>
                       <br><br>
-                      <div style="border:1px solid; width:80%; height: 85%;"> <!--MAXIMUM IS 8 ACTIVITIES-->
+                      <div style="border:2px solid; width:80%; height: 85%; border-radius:15px"> <!--MAXIMUM IS 8 ACTIVITIES-->
 
-                        <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
+                        <!-- <div style="margin:7.5px; border:2px solid; height:10%; width:95%; border-radius:15px" > -->
                           <?php
                               // $dateToday = date('Y-m-d');
-                              // $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday'";
+                              // $sqlStmnt = "SELECT * FROM `guest_register` WHERE `date` = '$dateToday' ORDER BY `date` DESC";
                               //
                               // $resultSet = mysqli_query($conn,$sqlStmnt);
                               //
@@ -124,7 +125,7 @@
                               // while($result = mysqli_fetch_array($resultSet))
                               // {
                               //   if($counter < $maxList) //to make sure it won't overflow
-                              //     echo '<div style="margin:7.5px; border:2px dashed; height:12.5%; width:90%" ><b>'.
+                              //     echo '<div style="margin:7.5px; border:1px solid; height:12.5%; width:90%; border-radius:15px" ><b>'.
                               //           //variables here
                               //          '</div>';
                               //   ++$counter;
@@ -141,7 +142,7 @@
                     <center>
                       <span style="font-size:35px"><b>EVENTS TODAY</b></span>
                       <br><br>
-                      <div style="border:1px solid; width:80%; height: 85%;">
+                      <div style="border:2px solid; width:95%; height: 85%; border-radius:15px">
                         <?php
                             $dateToday = date('Y-m-d');
                             $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday'";
@@ -154,7 +155,7 @@
                             while($result = mysqli_fetch_array($resultSet))
                             {
                               if($counter < $maxList) //to make sure it won't overflow
-                                echo '<div style="margin:7.5px; border:2px dashed; height:12.5%; width:90%" ><b>'.
+                                echo '<div style="margin:7.5px; border:1px solid; height:12.5%; width:90%; border-radius:15px" ><b>'.
                                       $result['eventTitle'].'</b>   '.$result['date'].'<br>by: '.$result['eventCreator'].
                                      '</div>';
                               ++$counter;

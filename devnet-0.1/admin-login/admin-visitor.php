@@ -87,12 +87,14 @@
 
                 </tr>
                 <tr class="row">
-                  <th class="col-2">CODE</th>
+                  <th class="col-2">VISITOR CODE</th>
                   <th class="col-3">NAME</th>
                   <th class="col-2">PURPOSE</th>
                   <th class="col-2">DATE</th>
                   <th class="col-2">TIME</th>
                   <th class="col-1">Action</th>
+
+                  <td ></td>
                 </tr>
 
               </thead>
@@ -102,7 +104,30 @@
                 </tr>
                 <tr class="row">
                   <td colspan="3" class="col-12">
+                    <?php
+                        include_once "..\process\connection.php";
+                        $dateToday = date('Y-m-d');
+                        $sqlStmnt = "SELECT * FROM `guest_register` ORDER BY `date` DESC";
+                        $resultSet2 = mysqli_query($conn,$sqlStmnt);
+                        $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
+                        $counter = 0;
 
+                        while($result2 = mysqli_fetch_array($resultSet2))
+                        {
+                            echo '<td class="col-2">'.$result2['guestcode'].'</td>
+                                  <td class="col-3">'.$result2['lastname'].', '.$result2['firstname'].' '.$result2['middlename'].'</td>
+                                  <td class="col-2">'.$result2['purpose'].'</td>
+                                  <td class="col-2">'.$result2['date'].'</td>
+                                  <td class="col-2">'.'NO TIME yet'.'</td>'.
+                                  '<td class="col-1" style="height:100px">'.
+                                    '<center>
+                                       <button class="btn btn-warning" style="padding:5px; margin-bottom:5px"><b>Check in</b></button>
+                                       <br>
+                                       <button class="btn btn-warning" style="padding:5px; margin-bottom:5px"><b>Check out</b></button>
+                                     </center>
+                                   </td>';
+                        }
+                     ?>
                   </td>
                 </tr>
               </tbody>

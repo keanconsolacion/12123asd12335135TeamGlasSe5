@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 10:51 PM
+-- Generation Time: May 13, 2020 at 12:53 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -37,21 +37,9 @@ CREATE TABLE `event_list` (
   `date` date NOT NULL,
   `startAt` time NOT NULL,
   `endat` time NOT NULL,
-  `venue` varchar(25) NOT NULL
+  `venue` varchar(25) NOT NULL,
+  `timeCreated` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `event_list`
---
-
-INSERT INTO `event_list` (`eventCode`, `eventTitle`, `eventCreator`, `eventcategory`, `eventaudience`, `date`, `startAt`, `endat`, `venue`) VALUES
-('', 'Fun Run', 'kean', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
-('', 'Battle of the bands', 'kean', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
-('', 'Xmas Party', 'kean', '', '', '2020-05-07', '00:00:00', '00:00:00', ''),
-('', 'Move Marathon', 'kean', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
-('', 'Xmas Party', 'Paul', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
-('', 'Midterms Exam', 'Maam KC', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
-('', 'Midterms Exam!!', 'Camille Pascua', '', '', '2020-05-06', '00:00:00', '00:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -68,7 +56,8 @@ CREATE TABLE `event_participant` (
   `time` time NOT NULL,
   `idgiven` varchar(20) NOT NULL,
   `contactnum` varchar(11) NOT NULL,
-  `guestcode` varchar(6) NOT NULL
+  `guestcode` varchar(6) NOT NULL,
+  `timeCreated` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -86,8 +75,18 @@ CREATE TABLE `guest_register` (
   `purpose` varchar(50) NOT NULL,
   `idgiven` varchar(20) NOT NULL,
   `contactnum` varchar(11) NOT NULL,
-  `guestcode` varchar(6) NOT NULL
+  `guestcode` varchar(6) NOT NULL,
+  `timeCreated` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `guest_register`
+--
+
+INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`, `idgiven`, `contactnum`, `guestcode`, `timeCreated`) VALUES
+('Kean', 'Martin', 'The Visitor', '', '2020-05-13', 'School Tour', 'School ID', '090050022', '757O5J', '00:00:00'),
+('Mordecai', 'Berners', 'The Blue Jay', '', '2020-05-13', 'Registrar', 'Goverment', '092222444', '9W9S33', '00:00:00'),
+('Rigby', 'Ritchie', 'The Raccoon', '', '2020-05-13', 'Event', 'Company ID', '09211111', 'Z25V21', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -99,15 +98,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `permission` int(1) NOT NULL
+  `permission` int(1) NOT NULL,
+  `dateCreated` date NOT NULL,
+  `timeCreated` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `permission`) VALUES
-(1, 'admin', 'admin', 0);
+INSERT INTO `users` (`id`, `username`, `password`, `permission`, `dateCreated`, `timeCreated`) VALUES
+(1, 'admin', 'admin', 0, '0000-00-00', '00:00:00');
 
 -- --------------------------------------------------------
 

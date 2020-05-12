@@ -6,6 +6,8 @@
       id int(11)
       username varchar(50)
       password varchar(50)
+      dateCreated DATE
+      timeCreated TIME
 
 @table
   guest_register
@@ -19,6 +21,7 @@
     idgiven varchar(20)
     contactnum varchar(11)
     guestcode varchar(6)
+    timeCreated TIME
 
 @table
   user_school_visit
@@ -49,6 +52,7 @@
     startat time
     endat time
     venue varchar(25)
+    timeCreated TIME
 
 @table
   event_participant
@@ -62,3 +66,4 @@
     idgiven varchar(20)
     contactnum varchar(11)
     guestcode varchar(6)
+    timeCreated TIME
