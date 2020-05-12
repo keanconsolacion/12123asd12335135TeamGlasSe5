@@ -14,6 +14,8 @@
 
         if($username == "adminlobby" && $password  == "adminlobby"){
           header('Location: admin-login\admin.php');
+        }elseif ($username == "adminevents" && $password  == "adminevents") {
+          header('Location: admin\admin_EventManager.php');
         }
 
         if($username!="" && $password!=""){

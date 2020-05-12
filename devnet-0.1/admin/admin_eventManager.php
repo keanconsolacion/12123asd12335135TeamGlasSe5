@@ -16,7 +16,7 @@
 <body onload="realtimeClock(), realtimeDate()">
   <div id="header">
    <nav class="navbar sticky-top navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#!">EVE CREATE EVENT WINDOW</a>
+    <a class="navbar-brand" href="#!">EVE EVENT MANAGER</a>
   </nav>
   </div>
 <div class="sidebar">
@@ -30,7 +30,7 @@
     </div>
   </div>
   <a href="#events">Ticket</a>
-  <a href="#logout">Logout</a>
+  <a href="../index.php">Logout</a>
 </div>
 
 <div class="content">
@@ -51,7 +51,7 @@
                     <div class="jumbotron">
                         <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
                         <h1>Pending Events</h1>
-                        <p>BBBBBBBBBBBBBBBBBB</p>
+
                         <p><a class="btn btn-default" href="#">View details »</a></p>
                     </div>
                   </div>
@@ -60,7 +60,7 @@
                     <div class="jumbotron">
                         <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
                         <h1>Pending Events</h1>
-                        <p>BBBBBBBBBBBBBBBBBB</p>
+
                         <p><a class="btn btn-default" href="#">View details »</a></p>
                     </div>
                   </div>
@@ -69,16 +69,16 @@
                     <div class="jumbotron">
                         <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
                         <h1>Approved Events</h1>
-                        <p>CCCCCCCCCCCCCCCCC</p>
+
                         <p><a class="btn btn-default" href="#">View details »</a></p>
                     </div>
                   </div>
 
-                  <div class="col-6 col-sm-6 col-lg-4">
+                  <div class="col-12 col-sm-12 col-lg-8">
                     <div class="jumbotron">
                         <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
                         <h1>Latest Activities</h1>
-                        <p>DDDDDDDDDDDDDDD</p>
+
                         <p><a class="btn btn-default" href="#">View details »</a></p>
                     </div>
                   </div>
