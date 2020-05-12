@@ -35,7 +35,7 @@
                   <ul class="nav flex-column">
                     <br><br>
                     <li class="nav-item">
-                      <a class="nav-link active" href="admin.<?php  ?>">
+                      <a class="nav-link active" href="admin.php">
                        <div class="sidebar-items"> <b>Dashboard</b></div>
                       </a>
                     </li>
