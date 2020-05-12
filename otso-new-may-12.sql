@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 11:34 AM
+-- Generation Time: May 12, 2020 at 10:51 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -21,6 +21,55 @@ SET time_zone = "+00:00";
 --
 -- Database: `otso`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_list`
+--
+
+CREATE TABLE `event_list` (
+  `eventCode` varchar(6) NOT NULL,
+  `eventTitle` varchar(50) NOT NULL,
+  `eventCreator` varchar(50) NOT NULL,
+  `eventcategory` varchar(25) NOT NULL,
+  `eventaudience` varchar(25) NOT NULL,
+  `date` date NOT NULL,
+  `startAt` time NOT NULL,
+  `endat` time NOT NULL,
+  `venue` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `event_list`
+--
+
+INSERT INTO `event_list` (`eventCode`, `eventTitle`, `eventCreator`, `eventcategory`, `eventaudience`, `date`, `startAt`, `endat`, `venue`) VALUES
+('', 'Fun Run', 'kean', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
+('', 'Battle of the bands', 'kean', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
+('', 'Xmas Party', 'kean', '', '', '2020-05-07', '00:00:00', '00:00:00', ''),
+('', 'Move Marathon', 'kean', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
+('', 'Xmas Party', 'Paul', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
+('', 'Midterms Exam', 'Maam KC', '', '', '2020-05-06', '00:00:00', '00:00:00', ''),
+('', 'Midterms Exam!!', 'Camille Pascua', '', '', '2020-05-06', '00:00:00', '00:00:00', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_participant`
+--
+
+CREATE TABLE `event_participant` (
+  `firstname` varchar(50) NOT NULL,
+  `middlename` varchar(50) NOT NULL,
+  `lastname` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `idgiven` varchar(20) NOT NULL,
+  `contactnum` varchar(11) NOT NULL,
+  `guestcode` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -67,6 +116,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `permission`) VALUES
 --
 
 CREATE TABLE `user_school_visit` (
+  `username` varchar(50) NOT NULL,
   `dateOfVisit` date NOT NULL,
   `purpose` varchar(80) NOT NULL,
   `idType` varchar(50) NOT NULL,
@@ -78,13 +128,15 @@ CREATE TABLE `user_school_visit` (
 -- Dumping data for table `user_school_visit`
 --
 
-INSERT INTO `user_school_visit` (`dateOfVisit`, `purpose`, `idType`, `contactNumber`, `id`) VALUES
-('0023-12-31', 'Enrollment', 'School ID', 23123, 1),
-('2003-12-31', 'Tour', 'Government', 12321, 2),
-('1970-01-01', 'Inquiry', 'School ID', 123, 3),
-('0023-12-31', 'Tour', 'Government', 123213, 4),
-('1970-01-01', 'Tour', 'Government', 0, 5),
-('1970-01-01', 'Inquiry', 'Company ID', 0, 6);
+INSERT INTO `user_school_visit` (`username`, `dateOfVisit`, `purpose`, `idType`, `contactNumber`, `id`) VALUES
+('', '0023-12-31', 'Enrollment', 'School ID', 23123, 1),
+('', '2003-12-31', 'Tour', 'Government', 12321, 2),
+('', '1970-01-01', 'Inquiry', 'School ID', 123, 3),
+('', '0023-12-31', 'Tour', 'Government', 123213, 4),
+('', '1970-01-01', 'Tour', 'Government', 0, 5),
+('', '1970-01-01', 'Inquiry', 'Company ID', 0, 6),
+('', '2020-05-14', 'Tour', 'Passport', 1231231123, 7),
+('', '2020-05-20', 'Tour', 'School ID', 9177598, 8);
 
 -- --------------------------------------------------------
 
@@ -103,7 +155,7 @@ CREATE TABLE `user_token` (
 --
 
 INSERT INTO `user_token` (`id`, `username`, `token`) VALUES
-(7, 'admin', '4geN6r33VX19X3112');
+(7, 'admin', '39p49ci1EFi8317M5');
 
 --
 -- Indexes for dumped tables
@@ -147,7 +199,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_school_visit`
 --
 ALTER TABLE `user_school_visit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user_token`
@@ -159,49 +211,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `event_list`
---
-
-CREATE TABLE `event_list` (
-  `eventtitle` varchar(50) NOT NULL,
-  `eventcreator` varchar(50) NOT NULL,
-  `eventcategory` varchar(25) NOT NULL,
-  `eventaudience` varchar(25) NOT NULL,
-  `date` date NOT NULL,
-  `startat` time NOT NULL,
-  `endat` time NOT NULL,
-  `venue` varchar(25) NOT NULL,
-  `guestcode` varchar(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
--- --------------------------------------------------------
-
---
--- Table structure for table `event_list`
---
-
-CREATE TABLE `event_participant` (
-  `firstname` varchar(50) NOT NULL,
-  `middlename` varchar(50) NOT NULL,
-  `lastname` varchar(25) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `date` date NOT NULL,
-  `time` time NOT NULL,
-  `idgiven` varchar(20) NOT NULL,
-  `contactnum` varchar(11) NOT NULL,
-  `guestcode` varchar(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `event_participant`
---
-
-INSERT INTO `event_participant` (`firstname`, `middlename`, `lastname`, `email`, `date`) VALUES
-('test','test2','test3', 'test@gmail.com', '0023-12-31');
-
--- --------------------------------------------------------
