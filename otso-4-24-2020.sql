@@ -175,7 +175,7 @@ CREATE TABLE `event_list` (
   `startat` time NOT NULL,
   `endat` time NOT NULL,
   `venue` varchar(25) NOT NULL,
-  `guestcode` varchar(6) NOT NULL
+  `eventcode` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
