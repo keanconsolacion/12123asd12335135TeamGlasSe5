@@ -21,7 +21,7 @@ include_once 'process/gencode.php';
       // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
 
       $sqlStmnt = "INSERT INTO `event_list` (`eventtitle`, `eventcreator`, `eventcategory`, `eventaudience`, `date`, `startat`,  `endat`, `venue`, `eventcode`)
-                    VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey')";
+                    VALUES ('$eventTitle','$eventCreator','$eventCategory','$eventDesc', '$venue', '$date', '$startTime', '$endTime', '$attendees', $generatekey)";
 
         $request =mysqli_query($conn,$sqlStmnt);
 

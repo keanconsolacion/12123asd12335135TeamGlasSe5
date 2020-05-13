@@ -37,7 +37,8 @@ CREATE TABLE `guest_register` (
   `purpose` varchar(50) NOT NULL,
   `idgiven` varchar(20) NOT NULL,
   `contactnum` varchar(11) NOT NULL,
-  `guestcode` varchar(6) NOT NULL
+  `guestcode` varchar(6) NOT NULL,
+   `timeCreated` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -50,7 +51,8 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `permission` int(1) NOT NULL
+  `permission` int(1) NOT NULL,
+   `timeCreated` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -175,7 +177,8 @@ CREATE TABLE `event_list` (
   `startat` time NOT NULL,
   `endat` time NOT NULL,
   `venue` varchar(25) NOT NULL,
-  `eventcode` varchar(6) NOT NULL
+  `eventcode` varchar(6) NOT NULL,
+  `timeCreated` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
