@@ -76,11 +76,7 @@ CREATE TABLE `guest_register` (
   `idgiven` varchar(20) NOT NULL,
   `contactnum` varchar(11) NOT NULL,
   `guestcode` varchar(6) NOT NULL,
-<<<<<<< HEAD:otso-4-24-2020.sql
    `timeCreated` time NOT NULL
-=======
-  `timeCreated` time NOT NULL
->>>>>>> master:otso_added_time_5-13-2020.sql
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -103,12 +99,8 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `permission` int(1) NOT NULL,
-<<<<<<< HEAD:otso-4-24-2020.sql
-   `timeCreated` time NOT NULL
-=======
   `dateCreated` date NOT NULL,
   `timeCreated` time NOT NULL
->>>>>>> master:otso_added_time_5-13-2020.sql
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -220,7 +212,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-<<<<<<< HEAD:otso-4-24-2020.sql
+
 
 -- --------------------------------------------------------
 
@@ -268,5 +260,3 @@ INSERT INTO `event_participant` (`firstname`, `middlename`, `lastname`, `email`,
 ('test','test2','test3', 'test@gmail.com', '0023-12-31');
 
 -- --------------------------------------------------------
-=======
->>>>>>> master:otso_added_time_5-13-2020.sql
