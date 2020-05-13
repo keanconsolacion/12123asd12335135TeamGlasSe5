@@ -47,7 +47,7 @@ function getConnection(){
   $dbuser = "root";
   $dbpass = "";
   $dbname = "otso";
-  return mysqli_connect($server, $dbuser, $dbpass, $dbname);;
+  return mysqli_connect($server, $dbuser, $dbpass, $dbname);
 }
 
  ?>

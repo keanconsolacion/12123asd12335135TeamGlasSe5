@@ -23,7 +23,7 @@ include_once 'process/gencode.php';
                     VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey','$currentDate','$currentTime')";
 
 
-        $request =mysqli_query($conn,$sqlStmnt);
+      $request =mysqli_query($conn,$sqlStmnt);
 
 
 
