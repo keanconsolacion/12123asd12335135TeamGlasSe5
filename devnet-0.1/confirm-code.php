@@ -15,11 +15,20 @@ include_once 'process/gencode.php';
       $idgiven = mysqli_real_escape_string($conn,$_POST['idgiven']);
       $contactnum = mysqli_real_escape_string($conn,$_POST['contactnum']);
       $generatekey = guest_keygen(6,2);
+<<<<<<< HEAD
 
 
       // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
       $sqlStmnt = "INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`,  `idgiven`, `contactnum`, `guestcode`)
                     VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey')";
+=======
+      $currentTime = date("h:i:s"); //time
+      $currentDate = date("Y-m-d"); //date
+
+      // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
+      $sqlStmnt = "INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`,  `idgiven`, `contactnum`, `guestcode` ,`dateCreated`,`timeCreated`)
+                    VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey','$currentDate','$currentTime')";
+>>>>>>> master
 
         $request =mysqli_query($conn,$sqlStmnt);
 

@@ -1,4 +1,7 @@
-<?php @(include_once "..\process\connection.php"); ?>
+<?php
+include_once("../process/connection.php");
+include_once("admin-process/process.php");
+?>
 
 <html lang="en">
   <head>
@@ -10,6 +13,7 @@
       integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="/admin-css/admin-stylesheet.css">
     <script type="text/javascript" src="admin-js/admin.js"></script>
+
 
     <style media="screen">
     .sidebar{
@@ -61,41 +65,53 @@
         </td>
 
         <td style="padding:80px; vertical-align:top">
-          <table class="table" style="height:30%">
+          <table class="table" style="height:30%;">
             <tbody height:>
               <tr class="row" style="height:100px;">
-                <td class="col-8"style="border: 1px solid;">
-                    <span style="font-size:25px" >DATE:</span> <b><span style="font-size:20px" id="dateToday"><?php echo date("M d") ?></span></b>
+                <td class="col-3"style="border: 1px solid; border-radius:15px">
+                  <center>
+                    <span style="font-size:25px" >DATE:</span><br><b><span style="font-size:20px" id="dateToday"><?php echo date("M d Y") ?></span></b>
+                  </center>
                 </td>
-                <td class="col-4"style="border: 1px solid;">
+
+                <td class="col-6">
+                </td>
+
+                <td class="col-3"style="border: 1px solid;border-radius:15px">
                   <center>
                     <div>
-                      <span style="font-size:25px" >TIME</span> <b><span style="font-size:20px" id="timeNow"><?php echo date("h:i A") ?></span></b>
+                      <span style="font-size:25px" >TIME</span> <br><b><span style="font-size:20px" id="timeNow"><?php echo date("h:i A") ?></span></b>
                     <div>
                   </center>
                 </td>
               </tr>
+              <tr>
 
+              </tr>
               <tr class="row" style="height:100px;">
                 <td class="col-4"style="border: 1px solid;">
                   <center>
-                    <span style="font-size:25px">Visitors:</span> <b><span style="font-size:20px" id="activeVisitors">0</span></b>
-                    <br><br>
-                    <button class='btn btn-info' id='refreshVisitor'>Refresh</button>
+                    <br>
+                    <span style="font-size:25px">Visitors:</span> <b><span style="font-size:20px" id="activeVisitors">
+                      <?php echo countVisitors() ?></span></b>
+                    <!-- <br><br>
+                    <button class='btn btn-info' id='refreshVisitor'>Refresh</button> -->
                   </center>
                 </td>
                 <td class="col-4"style="border: 1px solid;">
                   <center>
+                    <br>
                     <span style="font-size:25px">Checked-in:</span> <b><span style="font-size:20px" id="checkedIn">0</span></b>
-                    <br><br>
-                    <button class='btn btn-warning' id='checkInButton'><b>Add</b></button>
+                    <!-- <br><br>
+                    <button class='btn btn-warning' id='checkInButton'><b>Add</b></button> -->
                   </center>
                 </td>
                 <td class="col-4"style="border: 1px solid;">
                   <center>
+                    <br>
                     <span style="font-size:25px">Check-out:</span> <b><span style="font-size:20px" id="checkedOut">0</span></b>
-                    <br><br>
-                    <button class='btn btn-warning' id='checkOutButton'><b>Remove</b></button>
+                    <!-- <br><br>
+                    <button class='btn btn-warning' id='checkOutButton'><b>Remove</b></button> -->
                   </center>
                 </td>
               </tr>
@@ -109,10 +125,27 @@
                     <center>
                       <span style="font-size:35px"><b>LATEST ACTIVITIES</b></span>
                       <br><br>
-                      <div style="border:1px solid; width:80%; height: 85%;"> <!--MAXIMUM IS 8 ACTIVITIES-->
+                      <div style="border:2px solid; width:80%; height: 85%; border-radius:15px"> <!--MAXIMUM IS 8 ACTIVITIES-->
 
-                        <div style="margin:7.5px; border:2px dashed; height:10%; width:90%" >
-                          Sample recent activity.
+                        <!-- <div style="margin:7.5px; border:2px solid; height:10%; width:95%; border-radius:15px" > -->
+                          <?php
+                              // $dateToday = date('Y-m-d');
+                              // $sqlStmnt = "SELECT * FROM `guest_register` WHERE `date` = '$dateToday' ORDER BY `date` DESC";
+                              //
+                              // $resultSet = mysqli_query($conn,$sqlStmnt);
+                              //
+                              // $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
+                              // $counter = 0;
+                              //
+                              // while($result = mysqli_fetch_array($resultSet))
+                              // {
+                              //   if($counter < $maxList) //to make sure it won't overflow
+                              //     echo '<div style="margin:7.5px; border:1px solid; height:12.5%; width:90%; border-radius:15px" ><b>'.
+                              //           //variables here
+                              //          '</div>';
+                              //   ++$counter;
+                              // }
+                          ?>
                         </div>
 
                         </div>
@@ -124,12 +157,12 @@
                     <center>
                       <span style="font-size:35px"><b>EVENTS TODAY</b></span>
                       <br><br>
-                      <div style="border:1px solid; width:80%; height: 85%;">
+                      <div style="border:2px solid; width:95%; height: 85%; border-radius:15px">
                         <?php
                             $dateToday = date('Y-m-d');
                             $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday'";
 
-                            $resultSet = mysqli_query($conn,$sqlStmnt);
+                            $resultSet = mysqli_query(getConnection(),$sqlStmnt);
 
                             $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
                             $counter = 0;
@@ -137,7 +170,7 @@
                             while($result = mysqli_fetch_array($resultSet))
                             {
                               if($counter < $maxList) //to make sure it won't overflow
-                                echo '<div style="margin:7.5px; border:2px dashed; height:12.5%; width:90%" ><b>'.
+                                echo '<div style="margin:7.5px; border:1px solid; height:12.5%; width:90%; border-radius:15px" ><b>'.
                                       $result['eventTitle'].'</b>   '.$result['date'].'<br>by: '.$result['eventCreator'].
                                      '</div>';
                               ++$counter;

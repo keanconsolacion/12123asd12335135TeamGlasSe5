@@ -96,7 +96,7 @@
                   <?php
                       include_once "..\process\connection.php";
                       $dateToday = date('Y-m-d');
-                      $sqlStmnt = "SELECT * FROM `event_list` WHERE `date` = '$dateToday' ORDER BY `date` DESC";
+                      $sqlStmnt = "SELECT * FROM `event_list` ORDER BY `date` DESC";
                       $resultSet2 = mysqli_query($conn,$sqlStmnt);
                       $maxList = 6; //MAX LIST THAT THE CONTAINER CAN HANDLE
                       $counter = 0;
@@ -104,11 +104,11 @@
                       while($result2 = mysqli_fetch_array($resultSet2))
                       {
                           echo  '<th class="col-1"></th>'.
-                                '<td class="col-2">'.'Sample Code'.'</td>
+                                '<td class="col-2">'.'Sample Event Code'.'</td>
                                 <td class="col-3">'.$result2['eventTitle'].'</td>
-                                <td class="col-2">'.$result2['eventCreator'].'</td>
                                 <td class="col-2">'.$result2['date'].'</td>
-                                <td class="col-2">'.''.'</td>';
+                                <td class="col-2">'.$result2['startAt'].'</td>
+                                <td class="col-2">'.$result2['venue'].'</td>';
                       }
                    ?>
                 </tr>

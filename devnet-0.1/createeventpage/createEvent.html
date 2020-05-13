@@ -10,7 +10,25 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="page1.css">
+<<<<<<< HEAD
 
+=======
+<style type="text/css">
+[type=radio] + img{
+	cursor: pointer;
+}
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio]:checked + img {
+  outline: 10px solid #000FFF;
+}
+</style>
+>>>>>>> master
 </head>
 
 <body>
@@ -63,11 +81,16 @@
 			<table border="1" align="center">
 			<tr>
 			<a name="audience"></a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 				<th colspan="3">
 					<center>What are the audience of this event?</center>
 				</th>
 			</tr>
 			<tr>
+<<<<<<< HEAD
 				<td><center> <img class="image1" src="gears.png" style="height: 90px; width: 80px; "></center>
 					<br>
 					<center><b>Senior High School</b></center>
@@ -84,6 +107,35 @@
 					<center><b>Guest</b></center>
 
 			</tr>
+=======
+				<label>
+				<td><center>
+					<input type="radio" name="audience" id="shs" value = "shs">
+					<img class="image1" src="gears.png" style="height: 90px; width: 80px; "></center>
+					<br>
+					<center><b>Senior High School</b></center>
+				</label>
+				</td>
+
+				<label>
+				<td>
+					<input type="radio" name="audience" id="college" value = "college">
+					<img class="image1" src="document.png" style="height: 90px; width: 80px; " >
+					<br>
+					<center><b>College</b></center>
+				</label>
+
+				<label>
+				<td>
+					<input type="radio" name="audience" id="guest" value = "guest">
+					<img class="image1" src="briefcase.png"  style="height: 90px; width: 80px; ">
+					<br>
+					<center><b>Guest</b></center>
+				</label>
+
+			</tr>
+			</label>
+>>>>>>> master
 			</table>
 			<br><br><br>
 
