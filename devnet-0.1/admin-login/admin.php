@@ -1,6 +1,6 @@
 <?php
-include_once("..\process\connection.php");
-include_once("process\process.php");
+include_once("../process/connection.php");
+include_once("admin-process/process.php");
 ?>
 
 <html lang="en">
@@ -93,7 +93,7 @@ include_once("process\process.php");
                   <center>
                     <br>
                     <span style="font-size:25px">Visitors:</span> <b><span style="font-size:20px" id="activeVisitors">
-                      <?php countVisitors() ?></span></b>
+                      <?php echo countVisitors() ?></span></b>
                     <!-- <br><br>
                     <button class='btn btn-info' id='refreshVisitor'>Refresh</button> -->
                   </center>
