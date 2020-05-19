@@ -48,24 +48,20 @@
           <a href="../events/event-landing.php" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Events</a>
           <br><br><br><br>
 
-          <form action="index.php">
-             <input class="btn btn-danger" style="width: 125px;"type="submit" value="Logout" name="logout">
-            </form>
-      </div>
-
-
-    </div>
+   </div>
+ </div> 
 
 
 
-    <!-- Optional JavaScript -->
 
-    <!--===============================================================================================-->
-    	<script src="js/login_jquery.js"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <?php
+    //MODAL BLOCK
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+    require_once '../view/modal/logout-modal.php';
+    require_once '../process/logout.php';
+
+    //FOOTER BLOCK
+    require_once '../view/footer-main.php';
+
+    ?>

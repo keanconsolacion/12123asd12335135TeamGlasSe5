@@ -1,7 +1,10 @@
 <?php
 
-include_once 'process/connection.php';
-include_once 'process/confirm-code.php';
+
+include_once '../process/connection.php';
+
+
+
 
 $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
 $middlename = mysqli_real_escape_string($conn,$_POST['middlename']);
@@ -15,13 +18,22 @@ $contactnum = mysqli_real_escape_string($conn,$_POST['contactnum']);
 $generatekey=mysqli_real_escape_string($conn,$_POST['generatekey']);
 
 
-$sql= "INSERT INTO guest_register (firstname,middlename,lastname,email,date,purpose,idgiven,contactnum,guestcode)
-VALUES ('$firstname', '$middlename', '$lastname', '$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey')";
+echo "firstName:".$firstname;
+echo "firstName:".$middlename;
+echo "firstName:".$lastname;
+echo "firstName:".$email;
+echo "firstName:".$date;
+echo "firstName:".$purpose;
+echo "firstName:".$idgiven;
+echo "firstName:".$contactnum;
+echo "firstName:".$generatekey;
+
+$sql = "INSERT INTO user_school_visit (id, firstName, middleName, lastName,email, dateOfVisit, purpose, idType, contactNumber, guestcode)
+VALUES (NULL, '$firstname', '$middlename', '$lastname', '$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey')";
 
 $result = mysqli_query($conn,$sql);
 
-$_SESSION['isRegistered'] = 0;
-header("Location:../student-login/welcome.php");
+header("Location: ../student-login/welcome.php ")
 
 
  ?>
