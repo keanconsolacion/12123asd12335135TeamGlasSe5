@@ -21,7 +21,7 @@ VALUES ('$firstname', '$middlename', '$lastname', '$email', '$date', '$purpose',
 $result = mysqli_query($conn,$sql);
 
 $_SESSION['isRegistered'] = 0;
-header("Location:index.php");
+header("Location:../student-login/welcome.php");
 
 
  ?>

@@ -43,7 +43,7 @@ font-family: 'PT Sans', sans-serif;
    font-weight: 900;
    font-style: normal;
    letter-spacing: 1px;
-   font-size: 40px;
+   font-size: 25px;
    border-bottom:1px;
    border-color: #282828;
 
@@ -62,12 +62,12 @@ font-family: 'PT Sans', sans-serif;
    font-family: 'Roboto', sans-serif;
    font-weight:500;
    color: white;
+   font-size: 15px;
    margin-right: 20px;
 
  }
-
  .navlink:hover{
-   color: #D83F87  ;
+   color: #ffc107  ;
  }
  .nav-bottom{
    font-family: 'Roboto', sans-serif;
@@ -131,8 +131,8 @@ font-family: 'PT Sans', sans-serif;
    color: #D83F87;
  }
 
- .purple{
-   color: #D83F87;
+ .yellow{
+   color: #ffc107 ;
  }
 
  .jumbolead{
@@ -142,11 +142,11 @@ font-family: 'PT Sans', sans-serif;
  }
 
  .sublink:hover {
-   color: #D83F87;
+   color: #ffc107;
    font-size: 21px;
  }
  .notstudent a:link{
-     color:#D83F87;
+     color:#ffc107;
  }
 
 .btn-custom-purple{
@@ -158,5 +158,5 @@ font-family: 'PT Sans', sans-serif;
 .btn-custom-purple:hover{
   width: 100px;
   color: white;
-  background-color: #D83F87;
+  background-color: #ffc107;
 }

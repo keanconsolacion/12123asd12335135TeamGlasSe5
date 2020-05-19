@@ -6,7 +6,7 @@ input {
 }
 
 body {
-  background-color: #2a2a2a;
+    background-color: #2a2a2a;
   font-family: 'Roboto', sans-serif;
   color: white;
   overflow-x: hidden;
@@ -15,81 +15,6 @@ body {
 font-family: 'PT Sans', sans-serif;
  */
 
-.login-border{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight:700;
-  color: white;
-  background-color: black;
-  border: 2px solid;
-  border-radius: 25px;
-  border-color: black;
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-}
-
-.regform{
-  margin-top: -100px;
-}
-.back{
-  font-size: 30px;
-}
-
-.register-border{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight:700;
-  color: white;
-  background-color: black;
-  border: 2px solid;
-  border-radius: 25px;
-  border-color: black;
-  width: 500px;
-  height: 900px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.register_header{
-  font-size: 22px;
-}
-.login_header{
-  font-size: 30px;
-}
-.login_text{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.code-border{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight:700;
-  color: white;
-  background-color: black;
-  border: 2px solid;
-  border-radius: 25px;
-  border-color: black;
-  width: 500px;
-  height:680px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 
 .btn-edit{
   width: 90px;
@@ -99,6 +24,7 @@ font-family: 'PT Sans', sans-serif;
   margin-top: 10px;
   margin-left: 240px;
 }
+
 
 .header-code{
   font-family: 'Roboto', sans-serif;
@@ -152,7 +78,7 @@ font-family: 'PT Sans', sans-serif;
   font-weight: 900;
   font-style: normal;
   letter-spacing: 1px;
-  font-size: 40px;
+  font-size: 25px;
   border-bottom:1px;
   border-color: #282828;
 
@@ -171,12 +97,13 @@ font-family: 'PT Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
   font-weight:500;
   color: white;
+  font-size: 15px;
   margin-right: 20px;
 
 }
 
 .navlink:hover{
-  color: #D83F87  ;
+  color: #ffc107  ;
 }
 .nav-bottom{
   font-family: 'Roboto', sans-serif;
@@ -233,15 +160,15 @@ font-family: 'PT Sans', sans-serif;
 }
 
 .jumbocontatiner{
-  background-color: #212121;
+    background-color: #212121;
 }
 
 .sublink{
   color: #D83F87;
 }
 
-.purple{
-  color: #D83F87;
+.yellow{
+  color: #ffc107  ;
 }
 
 .jumbolead{
@@ -251,11 +178,11 @@ font-family: 'PT Sans', sans-serif;
 }
 
 .sublink:hover {
-  color: #D83F87;
+  color: #ffc107;
   font-size: 21px;
 }
 .notstudent a:link{
-    color:#D83F87;
+    color:#ffc107;
 }
 
 .btn-custom-purple{
