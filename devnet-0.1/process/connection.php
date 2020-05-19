@@ -18,23 +18,19 @@ session_start();
 
 */
 $server = "localhost";
-$dbuser = "root";
-$dbpass = "";
+$dbuser = "gtech.dp";
+$dbpass = "dp";
 
   //$dbname, is the name of the database being used, since in the office hosted servers I cannot change
   //my db name since it is already set for me, you can create your own database and change the settings here
   //to match your database.
-$dbname = "otso";
+$dbname = "paulodb";
 
-// <<<<<<< HEAD
-// =======
-//
-// >>>>>>> leonard_branch
-//
-//   //these variable will be used as an import in other php files when connecting to the database.
-//   //mysqli_connect is the newer version of mysql_connect, so avoid using any mysql functions and use mysqli.
-//   //all of these information is available at https://www.php.net/docs.php and https://www.w3schools.com/php/
-//   // you can ask me anytime at FB or at Discord @devnet-pol#5278
+
+  //these variable will be used as an import in other php files when connecting to the database.
+  //mysqli_connect is the newer version of mysql_connect, so avoid using any mysql functions and use mysqli.
+  //all of these information is available at https://www.php.net/docs.php and https://www.w3schools.com/php/
+  // you can ask me anytime at FB or at Discord @devnet-pol#5278
 
 $conn = mysqli_connect($server, $dbuser, $dbpass, $dbname);
 
@@ -42,14 +38,4 @@ $conn = mysqli_connect($server, $dbuser, $dbpass, $dbname);
 if (!$conn) {
  die("Connection failed: " . mysqli_connect_error());
 }
-
-
-function getConnection(){
-  $server = "localhost";
-  $dbuser = "root";
-  $dbpass = "";
-  $dbname = "otso";
-  return mysqli_connect($server, $dbuser, $dbpass, $dbname);;
-}
-
  ?>

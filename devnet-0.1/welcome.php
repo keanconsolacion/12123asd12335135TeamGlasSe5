@@ -1,3 +1,22 @@
+<?php
+
+include 'connection.php';
+include 'authenticate_token.php';  // Check user token
+
+// Check user login or not
+if(!isset($_SESSION['username'])){
+  echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
+  header('Location: index.php');
+}
+
+// logout
+if(isset($_POST['logout'])){
+ session_destroy();
+ header('Location: index.php');
+}
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,32 +29,19 @@
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="student-login-css/visitSchoolRegister.css">
-    <!-- THIS PAGE JS -->
-    <script src="student-login-js/visitSchoolRegister.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ihub_index.css">
   </head>
   <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"><h4><b>iHub</b></h4></a>
-    </nav>
-    <div class="main-div">
-      <form method="POST" action="#">
 
-        <center>
-          <div>
-            <br><br>  <br><br>  <br><br>  <br><br>
-            This is temporary.
-            <br>
-            but insertion to db works already.
-            <br><br>
-            <a href="../index.php" class="btn btn-primary">Go back to index.php</a><br><br>
-            <a href="welcome.php" class="btn btn-primary">Go back to welcome.php</a>
-          </div>
-        </center>
+<div class="text-center mt-5">
+  <h1>welcome.php inprogress</h1>
+  <h2><?php echo "debug: tokenID - ".$_SESSION['token'] ?></h2>
+  <form method='post' action="">
+     <input type="submit" value="Logout" name="logout">
+    </form>
+</div>
 
-      </form>
-    </div>
 
 
     <!-- Optional JavaScript -->
