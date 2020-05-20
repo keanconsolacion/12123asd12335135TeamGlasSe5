@@ -1,7 +1,6 @@
 <?php
 
-include_once 'process/connection.php';
-include_once 'process/confirm-code.php';
+include_once 'connection.php';
 
 $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
 $middlename = mysqli_real_escape_string($conn,$_POST['middlename']);
@@ -21,7 +20,7 @@ VALUES ('$firstname', '$middlename', '$lastname', '$email', '$date', '$purpose',
 $result = mysqli_query($conn,$sql);
 
 $_SESSION['isRegistered'] = 0;
-header("Location:../student-login/welcome.php");
+header("Location:../index.php");
 
 
  ?>

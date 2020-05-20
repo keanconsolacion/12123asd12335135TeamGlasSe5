@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- PT SANS CDN -->
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/welcome.css">
   </head>
   <body>
 
@@ -33,11 +34,39 @@
           <ul class="navbar-nav ml-auto">
 
               <li class="nav-item">
-                  <a class="nav-text" href="//codeply.com">Register</a>
+                  <a class="nav-text" href="//codeply.com">Guest</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-text" data-toggle="modal" data-target="#exampleModal" href="#">Login</a>
-              </li>
+
+                <div class="dropdown">
+  <a class="nav-text" href="#" role="button" id="dropdownMenuLink"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Login
+  </a>
+
+    <div class="dropdown-menu">
+      <form class="px-4 py-3">
+        <div class="form-group">
+          <label for="exampleDropdownFormEmail1 nav-text">Username</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="201801017">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+          <label class="form-check-label" for="dropdownCheck">
+            Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-outline-light mt-3 w-100">Sign in</button>
+      </form>
+      <div class="dropdown-divider "></div>
+      <a class="dropdown-item text-center" href="#">Guest Login</a>
+    </div>
+  </div>
+                </li>
           </ul>
       </div>
 </nav>
