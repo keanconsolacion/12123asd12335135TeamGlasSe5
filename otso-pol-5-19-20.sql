@@ -90,7 +90,9 @@ INSERT INTO `users` (`permission`, `id`, `username`, `password`, `firstName`, `m
 (0, 1, 'admin', 'admin', '', '', ''),
 (0, 3, 'devnet-pol', 'devnet', '', '', ''),
 (1, 4, '201801017', 'power', 'Dino Paulo', 'Reyes', 'Gomez'),
-(0, 6, '201801018', 'power', 'Jack', 'Severus', 'Sparrow');
+(0, 6, '201801018', 'power', 'Jack', 'Severus', 'Sparrow'),
+(0, 7, 'dev-kean', 'mordecai', '','','');
+
 
 -- --------------------------------------------------------
 
