@@ -24,7 +24,7 @@
 
                   <title>EVE</title>
 
-                  <script type="text/javascript">
+                  <script>
                   jQuery(function ($) {
 
                     $(".sidebar-dropdown > a").click(function() {
@@ -57,31 +57,67 @@
                   });
 
                   });
-
-
-                  // MY JQUERY CODE IS UNFEFINED *needs fixing @pol
                   $(document).ready(function(){
-                    $("#visit").hide();
+                      $("p").hide();
 
-              });
-                  $(function () {
+                      $("p").show();
                   });
 
-                  $(document).ready(function(){
-                $("#homelink").click(function(){
-                  $("#home").fadeToggle();
-                  $("#visit").fadeToggle();
-                });
-              });
-
-              $(document).ready(function(){
-            $("#visitlink").click(function(){
-              $("#home").fadeToggle();
-              $("#visit").fadeToggle();
-            });
-          });
-
-
+                  //MY JQUERY CODE IS UNFEFINED *needs fixing @pol
+                  //   $(document).ready(function(){
+                  //   $("#visit").hide();
+                  //   $("#confirm-code-user").hide();
+                  //
+                  //
+                  //
+                  //   /////////////////////
+                  // $("#homelink").click(function(){
+                  //
+                  //   if ($('#home').is(':visible')) {
+                  //
+                  //   } else {
+                  //     $("#home").fadeToggle();
+                  //
+                  //   }
+                  //
+                  //
+                  //
+                  //   });
+                  //
+                  // //////////////////////
+                  // $("#visitlink").click(function(){
+                  //
+                  //
+                  //     if ($('#visit').is(':visible')) {
+                  //       } else {
+                  //         $("#home").fadeToggle();
+                  //         $("#visit").fadeToggle();
+                  //       }
+                  //
+                  //   });
+                  //
+                  //
+                  // ///////////////////////
+                  // $("#visit-form").submit(function( event ) {
+                  //   $("#visit").fadeToggle();
+                  //   $("#confirm-code-user").fadeToggle();
+                  //   e.preventDefault();
+                  //     });
+                  //
+                  //
+                  // $("#edit").click(function(){
+                  //   $("#visit").fadeToggle();
+                  //   $("#confirm-code-user").fadeToggle();
+                  //
+                  //   });
+                  //
+                  //
+                  // $("#confirm-code").click(function(){
+                  //   $("#home").fadeToggle();
+                  //   $("#confirm-code-user").fadeToggle();
+                  //
+                  //   });
+                  // });
 
                   </script>
 

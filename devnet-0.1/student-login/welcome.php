@@ -23,7 +23,17 @@ if(isset($_POST['logout'])){
  //NAVBAR BLOCK
  require_once '../view/navbar/nav-student.php';
  //SIDEBAR BLOCK
+
  require_once '../view/sidebar/sidebar-login.php';
+/*┬─┬ ノ( ゜-゜ノ)
+0 - God / It
+1 - Event Manager
+2 - Security
+3 -User
+*/
+   require_once '../view/sidebar/sidebar-login.php';
+   // code...
+
 
  ?>
 
@@ -43,16 +53,18 @@ if(isset($_POST['logout'])){
      <?php   require_once '../announcement/login-user/iacademy-announcment/01120-A1/01120-A1.php';?>
      <?php   require_once '../announcement/login-user/iacademy-announcment/122319-A9/122319-A9.php';?>
    </div>
+
+
      <div class="container jumbocontatiner shadow p-5 visit" id="visit">
      <h2 class="blog-post-title text-center">Visit Registration</h2>
      <p class="blog-post-meta text-center">Please fill up the following up</p>
-     <form class="regform" action="" method="post">
+     <form class="regform" id="visit-form"  method="post">
 
 
 
            <div class="form-group">
              <label for="formGroupExampleInput2">Date of Visit</label>
-             <input type="date" class="form-control" name="date" placeholder="">
+             <input type="date" class="form-control" name="date" placeholder=""/>
            </div>
            <div class="form-group">
              <label for="formGroupExampleInput2">Purpose of Visit</label>
@@ -75,18 +87,18 @@ if(isset($_POST['logout'])){
            </div>
            <div class="form-group">
              <label for="formGroupExampleInput2">Email</label>
-             <input type="email" class="form-control"  name="email"placeholder="Optional">
+             <input type="email" class="form-control"  name="email"placeholder="Optional"/>
            </div>
            <div class="form-group">
              <label for="formGroupExampleInput2">Contanct Number</label>
-             <input type="text" class="form-control" name="contactnum" placeholder="Optional">
+             <input type="text" class="form-control" name="contactnum" placeholder="Optional"/>
            </div>
 
 
                    <div class="container mt-4">
                      <div class="row">
                        <div class="col text-center">
-                         <input class="btn btn-warning shadow" id="submit" type="submit" name="register" value="Confirm"style="width: 100px;">
+                         <input class="btn btn-warning shadow" id="submit-visit" type="submit" name="register" value="Confirm"style="width: 100px;"/>
                        </div>
                      </div>
                    </div>
@@ -130,7 +142,7 @@ if(isset($_POST['logout'])){
        </div>
      </div><!-- /.blog-sidebar -->
 
- <div class="jumbotron jumbotron-fluid">
+ <div class="jumbotron jumbotron-fluid" id="confirm-code-user">
    <div class="container p-5 jumbocontatiner shadow ">
  <div class="blog-post text-center">
    <h2 class="blog-post-title ">CONFIRMATION</h2>
@@ -167,7 +179,7 @@ $generatekey = guest_keygen(6,2);
      <div class=" shadow border">
        <div class="login-text p-5  text-center ">
              <h2 class="header-code">YOUR CODE</h2>
-       <span class="purple">   <h1 id="code"><?php echo $generatekey ?></h1></span>
+       <span class="yellow">   <h1 id="code"><?php echo $generatekey ?></h1></span>
              <h4>Valid for 1 transaction only</h4>
            </div>
      </div>
@@ -177,21 +189,22 @@ $generatekey = guest_keygen(6,2);
 
      <form class="text-center"  action="../process/process-user-visit.php" method="post">
        <div class="hiddenform" action= "hide">
-         <input type="hidden" name="firstname" value="<?php echo "$firstname" ?>">
-         <input type="hidden" name="middlename" value="<?php echo "$middlename" ?>">
-         <input type="hidden" name="lastname" value="<?php echo "$lastname" ?>">
-         <input type="hidden" name="email" value="<?php echo "$email" ?>">
-         <input type="hidden" name="date" value="<?php echo "$date" ?>">
-         <input type="hidden" name="email" value="<?php echo "$email" ?>">
-         <input type="hidden" name="purpose" value="<?php echo "$purpose" ?>">
-         <input type="hidden" name="idgiven" value="<?php echo "$idgiven" ?>">
-         <input type="hidden" name="contactnum" value="<?php echo "$contactnum" ?>">
-         <input type="hidden" name="generatekey" value="<?php echo "$generatekey" ?>">
+         <input type="hidden" name="firstname" value="<?php echo "$firstname" ?>"/>
+         <input type="hidden" name="middlename" value="<?php echo "$middlename" ?>"/>
+         <input type="hidden" name="lastname" value="<?php echo "$lastname" ?>"/>
+         <input type="hidden" name="email" value="<?php echo "$email" ?>"/>
+         <input type="hidden" name="date" value="<?php echo "$date" ?>"/>
+         <input type="hidden" name="email" value="<?php echo "$email" ?>"/>
+         <input type="hidden" name="purpose" value="<?php echo "$purpose" ?>"/>
+         <input type="hidden" name="idgiven" value="<?php echo "$idgiven" ?>"/>
+         <input type="hidden" name="contactnum" value="<?php echo "$contactnum" ?>"/>
+         <input type="hidden" name="generatekey" value="<?php echo "$generatekey" ?>"/>
        </div>
-         <a class="btn btn-outline-warning" id="confirm" href="javascript:history.go(-1)">Edit</a>
 
-         <input class="btn btn-outline-warning ml-1" type="submit" id="confirm" name="confirm-visit" value="Confirm">
+         <input class="btn btn-outline-warning ml-1" type="submit" id="confirm-code" name="confirm-visit" value="Confirm">
      </form>
+     <button class="btn btn-outline-warning"  id="edit" type="button" name="button">Edit</button>
+
      <?php
 
 
