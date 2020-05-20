@@ -1,22 +1,3 @@
-<?php
-
-include 'connection.php';
-include 'authenticate_token.php';  // Check user token
-
-// Check user login or not
-if(!isset($_SESSION['username'])){
-  echo "<script type='text/javascript'>alert('Token Error: Incorrect Login');</script>";
-  header('Location: index.php');
-}
-
-// logout
-if(isset($_POST['logout'])){
- session_destroy();
- header('Location: index.php');
-}
-
-
- ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -30,17 +11,57 @@ if(isset($_POST['logout'])){
     <script src="https://kit.fontawesome.com/e1bff3e01e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/ihub_index.css">
+    <style type="text/css">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #174886;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 16px;
+      background-color: white;
+    }
+
+    input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+    </style>
   </head>
   <body>
 
 
-<div class="text-center mt-5">
-  <h1>welcome.php inprogress</h1>
-  <h2><?php echo "debug: tokenID - ".$_SESSION['token'] ?></h2>
-  <form method='post' action="">
-     <input type="submit" value="Logout" name="logout">
+    <form class="event-form" method="post" action ="#">
+      <div class="container">
+        <center><label for="eventCode"><b>Event Code</b></label></center>
+        <input type="number" placeholder="Enter event code" name="number" required>
+
+        <center><span> No event code?</span><br/>
+        <button type="button" class="btn btn-info">Click Here</button></center> <br/><br/>
+
+        <a href="../student-login/welcome.php" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Back</a>
+        <a href="../events/events-registration.php" class="btn btn-info button-shadow" style="width: 250px; height: 50px; text-align:center;">Next</a>
+
+        <!-- <button type="button" class="btn btn-outline-primary">Back</button>
+        <button type="button" class="btn btn-outline-primary" href = "../events/events-registration.php">Next</button> -->
+
+
+      </div>
+
+
+      <div>
+      </div>
     </form>
-</div>
+
 
 
 

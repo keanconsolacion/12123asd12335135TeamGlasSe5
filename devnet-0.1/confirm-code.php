@@ -6,6 +6,7 @@
 
    // registration variables, with mysqli to prevent SQL Attack
 
+<<<<<<< HEAD
          $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
          $middlename = mysqli_real_escape_string($conn,$_POST['middlename']);
          $lastname = mysqli_real_escape_string($conn,$_POST['lastname']);
@@ -25,7 +26,27 @@
          if(isset($_POST['register'])){
            $_SESSION['isRegistered'] = 1;
                }
+=======
+      $firstname = mysqli_real_escape_string($conn,$_POST['firstname']);
+      $middlename = mysqli_real_escape_string($conn,$_POST['middlename']);
+      $lastname = mysqli_real_escape_string($conn,$_POST['lastname']);
+      $email = mysqli_real_escape_string($conn,$_POST['email']);
+      $date = mysqli_real_escape_string($conn,$_POST['date']);
+      // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
+      $date=date('Y-m-d',strtotime($date));
+      $purpose = mysqli_real_escape_string($conn,$_POST['purpose']);
+      $idgiven = mysqli_real_escape_string($conn,$_POST['idgiven']);
+      $contactnum = mysqli_real_escape_string($conn,$_POST['contactnum']);
+      $generatekey = guest_keygen(6,2);
+      $currentTime = date("h:i:s"); //time
+      $currentDate = date("Y-m-d"); //date
 
+      // //we need to cast date variable because MYSQL Date format is YYY-MMM-DDD
+      $sqlStmnt = "INSERT INTO `guest_register` (`firstname`, `middlename`, `lastname`, `email`, `date`, `purpose`,  `idgiven`, `contactnum`, `guestcode` ,`dateCreated`,`timeCreated`)
+                    VALUES ('$firstname','$middlename','$lastname','$email', '$date', '$purpose', '$idgiven', '$contactnum', '$generatekey','$currentDate','$currentTime')";
+>>>>>>> master
+
+        $request =mysqli_query($conn,$sqlStmnt);
 
                      if ($_SESSION['isRegistered'] != 1) {
                        header('Location: index.php');
