@@ -1,0 +1,86 @@
+body{
+    background-color: #174886;
+    color: white;
+}
+
+.main-div{
+  text-align: center;
+  border-radius: 15px;
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #373737;
+  display: inline-block;
+  box-shadow: 1px 1px 3px lightblue;
+}
+
+.display-card{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin:auto;
+}
+
+.button-shadow{
+  box-shadow: 1px 1px 1px black;
+  font-size: 17px;
+}
+
+
+.event{
+  text-align: center;
+
+    }
+
+
+.event-list{
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+
+    }
+
+.event-image{
+  height: 250px;
+  width: 250px;
+    }
+
+.event-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+    }
+
+.event-creator{
+  text-align: center;
+}
+
+.event-category{
+  text-align: center;
+}
+
+.event-audience{
+  text-align: center;
+}
+
+.event-image{
+  width: 100px;
+  height: 100px;
+}
+
+.event-desc{
+  display: none;
+}
+
+.view-button{
+  text-align: right;
+}
